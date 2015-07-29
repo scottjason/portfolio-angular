@@ -1,0 +1,65 @@
+/* Iphone 6 */
+
+@media (min-width: 321px) and (max-width: 667px) {
+  .landing-container {
+    background: red;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .landing-container-inner {
+    background: #042C43;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 340px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(225, 225, 225, .3);
+  }
+  .landing-container-inner > p {
+    color: white;
+    position: relative;
+    top: 120px;
+  }
+}
+
+
+/* Iphone 5, 5s */
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .landing-container {
+    background: green;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .landing-container-inner {
+    background: #042C43;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(225, 225, 225, .3);
+  }
+  .landing-container-inner > p {
+    color: white;
+    position: relative;
+    top: 120px;
+  }
+  /* STYLES GO HERE */
+}

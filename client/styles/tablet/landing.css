@@ -1,0 +1,29 @@
+@media (min-width: 668px) and (max-width: 1024px) {
+  .landing-container {
+    background: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .landing-container-inner {
+    background: #042C43;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(225, 225, 225, .3);
+  }
+  .landing-container-inner > p {
+    color: white;
+    position: relative;
+    top: 120px;
+  }
+}
