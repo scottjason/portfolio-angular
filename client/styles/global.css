@@ -6,4 +6,9 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.inline-block {
+  display: inline-block;
 }

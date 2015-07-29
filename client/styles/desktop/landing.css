@@ -1,3 +1,5 @@
+/* Desktop */
+
 @media (min-width: 1024px) {
   .landing-overlay {
     background: rgba(0, 0, 0, .4);
@@ -17,23 +19,55 @@
     height: 100%;
   }
   .landing-container-inner {
-    background: #042C43;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     width: 800px;
-    height: 400px;
+    height: 210px;
     margin: auto;
     text-align: center;
-    border: 1px solid rgba(225, 225, 225, .3);
   }
-  .landing-container-inner > p {
-    color: orange;
+  .landing-title {
+    margin: 0;
+    top: 10px;
+    color: white;
     position: relative;
-    top: 120px;
+    font-size: 48px;
+    font-weight: 300;
+  }
+  .landing-subtitle {
+    margin: 0;
+    top: 13px;
+    color: #fa9581;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .landing-line {
+    position: relative;
+    width: 500px;
+    height: 1px;
+    background: rgba(225, 225, 225, .4);
+    top: 20px;
+    margin: auto;
+  }
+  .landing-opts {
+    color: white;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .landing-opts:hover {
+    color: #fa9581;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
   }
 }
-
-
