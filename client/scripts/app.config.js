@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('BoilerPlate')
+angular.module('Portfolio')
   .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
     $stateProvider

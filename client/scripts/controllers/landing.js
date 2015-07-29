@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('BoilerPlate')
+angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
 function LandingCtrl($scope, $rootScope, $state, $timeout) {

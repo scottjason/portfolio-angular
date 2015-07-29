@@ -1,6 +1,6 @@
 'use strict';
 
 angular
-  .module('BoilerPlate', [
+  .module('Portfolio', [
     'ui.router'
   ]);
