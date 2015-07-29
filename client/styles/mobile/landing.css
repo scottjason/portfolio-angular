@@ -33,7 +33,7 @@
 
 /* Iphone 5, 5s */
 
-@media (min-width: 320px) and (max-width: 568px) {
+@media (min-width: 320px) and (max-width: 374px) {
   .landing-container {
     background: black;
     position: absolute;
