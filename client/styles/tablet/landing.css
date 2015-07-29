@@ -34,6 +34,15 @@
     position: relative;
     font-size: 48px;
     font-weight: 300;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+  }
+  .landing-title.fadein-point2 {
+    opacity: 1;
   }
   .landing-subtitle {
     margin: 0;

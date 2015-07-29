@@ -28,6 +28,14 @@
     height: 210px;
     margin: auto;
     text-align: center;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+  }
+  .landing-container-inner.translate-up {
+    opacity: 0;
   }
   .landing-title {
     margin: 0;
@@ -36,6 +44,15 @@
     position: relative;
     font-size: 48px;
     font-weight: 300;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+  }
+  .landing-title.fadein-point2 {
+    opacity: 1;
   }
   .landing-subtitle {
     margin: 0;

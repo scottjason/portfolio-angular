@@ -1,7 +1,7 @@
 <div class='landing-overlay'></div>
 <div ng-init='landingCtrl.initialize();' class='landing-container'>
-  <div class='landing-container-inner'>
-  <p class='landing-title'>Scott Jason</p>
+  <div ng-class="{ 'translate-up' : (translateUp) }" class='landing-container-inner'>
+  <p ng-class="{ 'fadein-point2' : (fadeTitle) }" class='landing-title'>Scott Jason</p>
   <p class='landing-subtitle'>Software Engineer | San Francisco, CA</p>
   <div class='landing-line'></div>
   	<p class='landing-opts inline-block'>work</p>
