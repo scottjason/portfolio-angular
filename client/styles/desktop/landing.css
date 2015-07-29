@@ -15,14 +15,14 @@
     right: 0;
     top: 0;
     bottom: 0;
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 600px;
     margin: auto;
     text-align: center;
     border: 1px solid rgba(225, 225, 225, .3);
   }
   .landing-container-inner > p {
-    color: white;
+    color: orange;
     position: relative;
     top: 120px;
   }
