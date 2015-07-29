@@ -1,6 +1,14 @@
 @media (min-width: 1024px) {
+  .landing-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
   .landing-container {
-    background: black;
     position: absolute;
     left: 0;
     right: 0;
