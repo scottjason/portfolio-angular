@@ -1,6 +1,6 @@
 /* Iphone 6 */
 
-@media (min-width: 321px) and (max-width: 667px) {
+@media (min-width: 375px) and (max-width: 677px) {
   .landing-container {
     background: black;
     position: absolute;
