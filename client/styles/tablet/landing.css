@@ -1,13 +1,4 @@
 @media (min-width: 568px) and (max-width: 1024px) {
-
-  .landing-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-  }
   .landing-container-inner {
     position: absolute;
     left: 0;

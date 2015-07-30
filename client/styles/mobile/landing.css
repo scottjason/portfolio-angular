@@ -1,7 +1,4 @@
-/* Iphone 5, 5s */
-
 @media (min-width: 320px) and (max-width: 568px) {
-
   .landing-container-inner {
     position: absolute;
     left: 0;
@@ -9,10 +6,8 @@
     top: 0;
     bottom: 0;
     width: 280px;
-    height: 400px;
+    height: 210px;
     margin: auto;
     text-align: center;
-    border: 1px solid rgba(225, 225, 225, .3);
   }
-
 }

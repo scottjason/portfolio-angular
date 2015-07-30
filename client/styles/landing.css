@@ -6,37 +6,51 @@
   width: 100%;
   height: 100%;
   margin: auto;
+
 }
 
 .landing-container {
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
   margin: auto;
   width: 100%;
   height: 100%;
 }
 
-.landing-title.fadein-point2 {
-  opacity: 1;
+.landing-title {
+  color: white;
+  position: relative;
+  font-size: 48px;
+  font-weight: 300;
+  top: 24px;
+  z-index: 2;
+  margin: auto;
+  width: 243px;
+  text-align: center;
 }
 
 .landing-subtitle {
-  margin: 0;
-  top: 13px;
-  color: #fa9581;
+  top: 40px;
+  color: #fff;
   position: relative;
   font-size: 18px;
   font-weight: 300;
+  width: 316px;
+  margin: auto;
+}
+
+.article-text {
+  color: white;
 }
 
 .landing-line {
   position: relative;
   width: 500px;
   height: 1px;
-  background: rgba(225, 225, 225, .4);
-  top: 20px;
+  background: #fa9581;
   margin: auto;
+  bottom: 14px;
 }
 
 .landing-opts {

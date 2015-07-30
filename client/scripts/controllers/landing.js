@@ -7,13 +7,22 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
 
   var ctrl = this;
 
-  this.initialize = function() {
+  this.onWelcome = function() {
     $timeout(function() {
-      $scope.fadeTitle = true;
-      $timeout(function(){
-      	// $scope.translateUp = true;
-      }, 1000);
-    }, 100);
+      $scope.fadeWelcome = true;
+      $timeout(function() {
+        $scope.showOverlay = true;
+        $timeout(function() {
+          $scope.fadeInTitle = true;
+          $timeout(function() {
+            $scope.fadeInLocation = true;
+            $timeout(function() {
+              $scope.showScrollBar = true;
+            }, 100);
+          }, 300);
+        }, 700);
+      }, 120);
+    });
   };
 
 
