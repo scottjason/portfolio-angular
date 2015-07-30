@@ -11,7 +11,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
     $timeout(function() {
       $scope.fadeTitle = true;
       $timeout(function(){
-      	$scope.translateUp = true;
+      	// $scope.translateUp = true;
       }, 1000);
     }, 100);
   };
