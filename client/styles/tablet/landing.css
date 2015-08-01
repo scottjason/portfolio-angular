@@ -4,10 +4,12 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 60px;
     width: 628px;
     height: 210px;
     margin: auto;
     text-align: center;
   }
 }
+
+

@@ -10,4 +10,16 @@
     margin: auto;
     text-align: center;
   }
+  .landing-title {
+    font-size: 36px;
+  }
+  .landing-subtitle {
+    font-size: 14px;
+    width: 280px;
+  }
+  .landing-line {
+    position: relative;
+    width: 250px;
+    top: 10px;
+  }
 }
