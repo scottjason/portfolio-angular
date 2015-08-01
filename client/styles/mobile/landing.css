@@ -4,22 +4,29 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 60px;
     width: 280px;
     height: 210px;
     margin: auto;
     text-align: center;
   }
   .landing-title {
+    position: relative;
     font-size: 36px;
+    bottom: 3px;
   }
   .landing-subtitle {
     font-size: 14px;
     width: 280px;
   }
   .landing-line {
-    position: relative;
     width: 250px;
-    top: 10px;
+  }
+  .welcome-btn {
+    width: 150px;
+    height: 30px;
+  }
+  .welcome-btn > p {
+    font-size: 14px;
   }
 }

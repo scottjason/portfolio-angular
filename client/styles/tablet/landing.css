@@ -10,6 +10,11 @@
     margin: auto;
     text-align: center;
   }
+  .landing-line {
+    width: 350px;
+  }
+  .landing-subtitle {
+    /*top: 25px;*/
+    /*width: 280px;*/
+  }
 }
-
-

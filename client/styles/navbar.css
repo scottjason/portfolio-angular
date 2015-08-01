@@ -20,6 +20,7 @@
   padding-bottom: 40px;
   padding-top: 10px;
   display: none;
+  height: 100%;
 }
 
 .article-container.unhide {
@@ -35,18 +36,21 @@
 .company-name {
   color: white;
   font-size: 18px;
+  margin: 0;
 }
 
 .role-name {
   font-size: 14px;
   color: #46A8E5;
   padding-top: 10px;
+  margin: 0;
 }
 
 .interval-and-location {
   padding-top: 1px;
   font-size: 13px;
   color: #fff;
+  margin: 0;
 }
 
 .overlay-container-inner {
@@ -68,14 +72,14 @@
 }
 
 .navbar-container-inner {
-  color: white;
   position: relative;
+  color: white;
   left: 0;
   margin: 0;
-  left: 13%;
+  padding-left: 12%;
   font-weight: 300;
   z-index: 1;
-  top: 65px;
+  padding-top: 65px;
 }
 
 .navbar-copy {
@@ -87,20 +91,22 @@
   opacity: 0;
 }
 
-.navbar-right-container {
-  position: relative;
+
+/*.navbar-right-container {
+  position: absolute;
   margin: 0;
   font-weight: 400;
   top: 26px;
   float: right;
-  right: 25%;
+  padding-right: 14%;
   font-size: 18px;
 }
+*/
 
 
 /*orange  color: #fa9581;*/
 
-span.navbar-spacer {
+.navbar-spacer {
   height: 20px;
   width: 1px;
   background-color: rgba(0, 0, 0, .3);
@@ -114,22 +120,23 @@ span.navbar-spacer {
 }
 
 .navbar-copy.title {
+  position: absolute;
   font-size: 42px;
   margin: 0;
 }
 
 .navbar-tab {
-  display: inline-block;
+  position: absolute;
+  right: 160px;
+  top: 77px;
   width: 340px;
   text-align: center;
   font-size: 14px;
   height: 31px;
-  position: relative;
   bottom: 16px;
   background-color: #efefef;
   border: 1px solid;
   border-radius: 4px 5px 0 0;
-  margin: 00;
   text-transform: capitalize;
   word-spacing: 23px;
   opacity: 0;
@@ -157,3 +164,4 @@ span.navbar-spacer {
   -o-transition: all .2s ease-in;
   transition: all .2s ease-in;
 }
+

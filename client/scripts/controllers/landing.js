@@ -16,9 +16,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
           $scope.fadeInTitle = true;
           $timeout(function() {
             $scope.fadeInLocation = true;
-            $timeout(function() {
-              $scope.showScrollBar = true;
-            }, 100);
           }, 300);
         }, 700);
       }, 120);

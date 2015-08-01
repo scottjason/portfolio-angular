@@ -2,7 +2,7 @@
 <!-- Start NavBar  -->
 <div ng-show='showOverlay' class='navbar-container'>
   <div class='navbar-container-inner'>
-    <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
+    <!-- <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p> -->
     <div class='navbar-right-container'>
       <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
         <p class='navbar-copy work'>work<span class='navbar-spacer'></span></p>
@@ -13,55 +13,58 @@
     </div>
   </div>
 </div>
+
 <!-- Start Welcome  -->
 <div ng-init='landingCtrl.initialize();' class='landing-container'>
   <div ng-class='{ "fade-out" : ( fadeWelcome ) }' class='landing-container-inner'>
     <p class='landing-title'>Scott Jason</p>
-    <p class='landing-subtitle'>Software Engineer | San Francisco, CA</p>
     <div class='landing-line'></div>
-    <div ng-click='landingCtrl.onWelcome();' class='welcome-btn'>
-      <p>Welcome</p>
-    </div>
-  </div>
-  <!-- Start Ovlerlay Main Body  -->
-  <div ng-class='{ "show-overlay" : ( showOverlay ) }' class='landing-overlay-content'>
-    <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='overlay-container-inner'>
-      <p class='work-type'>Professional Work</p>
-      <div ng-class='{ "unhide" : ( showScrollBar ) }' class='article-container'>
-        <p class='company-name'>Stanza</p>
-        <div class='article-line'></div>
-        <p class='role-name'>Software Engineer</p>
-        <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
-        <div class='article-text-container'>
-          <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class='work-spacer'></div>
-        <p class='company-name'>Interact</p>
-        <div class='article-line'></div>
-        <p class='role-name'>Software Engineer</p>
-        <p class="interval-and-location">December 2014 - March 2015 | San Francisco, Ca</p>
-        <div class='article-text-container'>
-          <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <p class='work-type'>Portfolio Projects</p>
-      <div ng-class='{ "unhide" : ( showScrollBar ) }' class='article-container'>
-        <p class='company-name'>Room Baby</p>
-        <div class='article-line'></div>
-        <p class='role-name'>Software Engineer</p>
-        <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
-        <div class='article-text-container'>
-          <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class='work-spacer'></div>
-        <p class='company-name'>Room Baby</p>
-        <div class='article-line'></div>
-        <p class='role-name'>Software Engineer</p>
-        <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
-        <div class='article-text-container'>
-          <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-    </div>
+    <p class='landing-subtitle'>Software Engineer | San Francisco, CA</p>
+    <!-- <div ng-click='landingCtrl.onWelcome();' class='welcome-btn'> -->
+      <!-- <p>Welcome</p> -->
+    <!-- </div> -->
   </div>
 </div>
+
+
+<!-- Start Ovlerlay Main Body  -->
+
+<div ng-show='showOverlay' ng-class='{ "show-overlay" : ( showOverlay ) }' class='landing-overlay-content'>
+  <p class='work-type'>Professional Work</p>
+  <p class='company-name'>Stanza</p>
+  <div class='article-line'></div>
+  <p class='role-name'>Software Engineer</p>
+  <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
+  <div class='article-text-container'>
+    <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class='work-spacer'></div>
+  <p class='company-name'>Interact</p>
+  <div class='article-line'></div>
+  <p class='role-name'>Software Engineer</p>
+  <p class="interval-and-location">December 2014 - March 2015 | San Francisco, Ca</p>
+  <div class='article-text-container'>
+    <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <p class='work-type'>Portfolio Projects</p>
+  <p class='company-name'>Room Baby</p>
+  <div class='article-line'></div>
+  <p class='role-name'>Software Engineer</p>
+  <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
+  <div class='article-text-container'>
+    <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class='work-spacer'></div>
+  <p class='company-name'>Room Baby</p>
+  <div class='article-line'></div>
+  <p class='role-name'>Software Engineer</p>
+  <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
+  <div class='article-text-container'>
+    <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+
+
+
+<!-- </div> -->

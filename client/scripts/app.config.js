@@ -9,6 +9,11 @@ angular.module('Portfolio')
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl as landingCtrl'
       })
+    $stateProvider
+      .state('interface', {
+        templateUrl: 'views/interface.html',
+        controller: 'LandingCtrl as landingCtrl'
+      })
 
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
