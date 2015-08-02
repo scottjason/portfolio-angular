@@ -5,7 +5,10 @@ angular.module('Portfolio')
 
 function LandingCtrl($scope, $rootScope, $timeout, $window) {
 
+  $scope.user = {};
+
   $rootScope.$on('dropdown:setFixed', function() {
+    console.log('on setFixed')
     $scope.fixDropdown = true;
     if (!$scope.$$phase) {
       $scope.$apply();

@@ -7,23 +7,20 @@
   right: 0;
   top: 130px;
   margin: auto;
-  height: 0;
-  width: 0;
+  height: 100%;
+  width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
   border-bottom: transparent;
   border-radius: 15px 15px 0 0;
   padding: 20px;
-  -webkit-transition: all .7s ease;
-  -moz-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  transition: all .7s ease;
 }
 
-.overlay-content.show-overlay {
-  height: 100%;
-  width: 80%;
+.overlay-content.show-contact {
+  height: 400px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 30px;
 }
+
 
 
 /* Article Container */
