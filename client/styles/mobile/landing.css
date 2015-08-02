@@ -43,15 +43,7 @@
   .navbar-tab {
     display: none;
   }
-  .dropdown-wrap div {
-    text-align: center;
-    margin: 0;
-    opacity: 0;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-  }
+
   .dropdown-wrap p {
     text-align: center;
     background-color: white;
@@ -73,18 +65,17 @@
     height: 40px;
     left: 0;
     margin: auto;
+    top: 90px;
+    right: 0;
+    border-radius: 5px 5px 0 0;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    top: 90px;
-    right: 0;
-    border-radius: 5px 5px 0 0;
   }
   .dropdown-wrap.on-open {
     height: 188px;
   }
-  .dropdown-wrap div.on-open,
   .dropdown-wrap p.on-open {
     opacity: 1;
     border-radius: 5px 5px 0 0;

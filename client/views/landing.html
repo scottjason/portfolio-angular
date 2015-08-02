@@ -3,9 +3,8 @@
 <div ng-show='showOverlay' class='navbar-container'>
   <div class='navbar-container-inner'>
     <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
-  
-    <div ng-include src="'views/dropdown.html'"></div>
-
+    <ng-dropdown></ng-dropdown>
+    <!-- <div ng-include src="'views/dropdown.html'"></div> -->
     <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
       <div class='navbar-block portfolio'>
         <p class='navbar-copy work'>Portfolio</p>
@@ -69,4 +68,3 @@
   </div>
 </div>
 <!-- </div> -->
-  

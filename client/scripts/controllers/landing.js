@@ -31,10 +31,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
     });
   };
 
-  this.toggleDropDown = function() {
-    $scope.isOpen = !$scope.isOpen;
-  };
-
   this.optSelected = function(optSelected) {
     console.log(optSelected);
   };
