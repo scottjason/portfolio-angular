@@ -1,5 +1,7 @@
-<div ng-click='landingCtrl.toggleDropDown($event);'>
-  <div class='dropdown-wrap' ng-class='{ "on-open" : ( isOpen ) }'>
-      <p ng-class='{ "on-open" : ( isOpen ) }' ng-click='landingCtrl.optSelected(opt.name);' ng-repeat='opt in dropdownOpts'>{{ opt.name }}</p>
+<div ng-click='landingCtrl.toggleDropdown();'>
+  <div class='dropdown-wrap' ng-class='{ "on-open" : (isOpen) }'>
+  <p ng-hide='isOpen' class='placeholder'> {{ placeholder }} </p>
+    <i ng-hide='isOpen'  class="fa fa-caret-down"></i>
+    <p class='dropdown-opt' ng-class='{ "on-open" : (isOpen) }' ng-click='landingCtrl.optSelected(opt.name);' ng-repeat='opt in dropdownOpts'>{{ opt.name }}</p>
   </div>
 </div>

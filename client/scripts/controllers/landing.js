@@ -7,15 +7,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
 
   var ctrl = this;
 
-  $scope.isOpen = null;
-
-  $scope.dropdownOpts = [
-    {'name': 'Portfolio'},
-    {'name': 'Resume'},
-    {'name': 'About'},
-    {'name': 'Contact'},
-  ];
-
   this.onWelcome = function() {
     $timeout(function() {
       $scope.fadeWelcome = true;
@@ -30,11 +21,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
       }, 120);
     });
   };
-
-  this.optSelected = function(optSelected) {
-    console.log(optSelected);
-  };
-
 
   LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout'];
 }

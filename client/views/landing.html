@@ -1,10 +1,13 @@
-<div class='landing-overlay'></div>
+
+<div ng-class="{ 'darken' : (isOpen) }"  class='landing-overlay'></div>
+
 <!-- Start NavBar  -->
 <div ng-show='showOverlay' class='navbar-container'>
   <div class='navbar-container-inner'>
     <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
+
     <ng-dropdown></ng-dropdown>
-    <!-- <div ng-include src="'views/dropdown.html'"></div> -->
+
     <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
       <div class='navbar-block portfolio'>
         <p class='navbar-copy work'>Portfolio</p>

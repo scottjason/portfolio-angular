@@ -1,13 +1,13 @@
- 
+
  .navbar-block.portfolio:hover {
    background: #fa9581;
    color: white;
  }
- 
+
  .navbar-block.portfolio {
    cursor: pointer;
  }
- 
+
  .navbar-block.portfolio p {
    -moz-transition: all .5s ease;
    -ms-transition: all .5s ease;
@@ -15,18 +15,18 @@
    transition: all .5s ease;
    cursor: pointer;
  }
- 
+
  .navbar-block.portfolio {
    -moz-transition: all .5s ease;
    -ms-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
  }
- 
+
  .navbar-block.portfolio p:hover {
    color: white;
  }
- 
+
  .article-text {
    color: white;
    padding-top: 20px;
@@ -34,7 +34,7 @@
    font-weight: 300;
    width: 97%;
  }
- 
+
  .article-line {
    position: relative;
    background-color: rgba(225, 225, 225, .6);
@@ -42,7 +42,7 @@
    height: 1px;
    top: 5px;
  }
- 
+
  .article-container {
    position: relative;
    padding-left: 25px;
@@ -51,37 +51,37 @@
    display: none;
    height: 100%;
  }
- 
+
  .article-container.unhide {
    display: block;
  }
- 
+
  .work-type {
    color: #fa9581;
    position: relative;
    width: 200px;
  }
- 
+
  .company-name {
    color: white;
    font-size: 18px;
    margin: 0;
  }
- 
+
  .role-name {
    font-size: 14px;
    color: #46A8E5;
    padding-top: 10px;
    margin: 0;
  }
- 
+
  .interval-and-location {
    padding-top: 1px;
    font-size: 13px;
    color: #fff;
    margin: 0;
  }
- 
+
  .overlay-container-inner {
    position: relative;
    height: 50px;
@@ -89,7 +89,7 @@
    padding-top: 20px;
    opacity: 0;
  }
- 
+
  .navbar-container {
    position: absolute;
    z-index: 8;
@@ -99,7 +99,7 @@
    top: 0;
    margin: auto;
  }
- 
+
  .navbar-container-inner {
    position: relative;
    color: white;
@@ -110,12 +110,12 @@
    z-index: 1;
    padding-top: 65px;
  }
- 
+
  .navbar-copy {
    display: inline-block;
  }
  /*orange  color: #fa9581;*/
- 
+
  .navbar-spacer {
    height: 20px;
    width: 1px;
@@ -123,12 +123,12 @@
    position: absolute;
    margin-left: 18px;
  }
- 
+
  .navbar-tab p {
    position: relative;
    top: 5px;
  }
- 
+
  .navbar-copy.title {
    font-size: 42px;
    margin: 0;
@@ -141,7 +141,7 @@
    top: 20px;
    position: relative;
  }
- 
+
  .navbar-tab {
    position: absolute;
    right: 160px;
@@ -153,7 +153,7 @@
    border-radius: 4px 5px 0 0;
    text-transform: capitalize;
  }
- 
+
  .navbar-block {
    display: inline-block;
    width: 102px;
@@ -161,7 +161,7 @@
    background: #efefef;
    position: relative;
  }
- 
+
  .navbar-copy.work,
  .navbar-copy.resume,
  .navbar-copy.about,
@@ -172,7 +172,7 @@
    font-weight: 400;
    margin: 0 5px 0 5px;
  }
- 
+
  .overlay-container-inner.fade-in,
  .navbar-tab.fade-in,
  .navbar-copy.title.fade-in,

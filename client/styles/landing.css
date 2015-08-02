@@ -1,3 +1,7 @@
+.landing-overlay.darken {
+  background: rgba(0, 0, 0, .8);
+  z-index: 3;
+}
 .landing-overlay {
   background: rgba(0, 0, 0, .4);
   position: fixed;

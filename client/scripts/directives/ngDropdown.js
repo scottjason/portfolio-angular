@@ -4,7 +4,6 @@ angular
 
 function ngDropdown() {
   var directive = {
-    link: link,
     controller: controller,
     bindToController: true,
     templateUrl: '/views/dropdown.html',
@@ -12,16 +11,24 @@ function ngDropdown() {
   };
   return directive;
 
-  function link(scope, element, attrs) {
-    element.bind('click', function(event) {
-      console.log('clicked', event);
-    })
-  }
-
   function controller($scope) {
-    $scope.landingCtrl.toggleDropDown = function() {
+
+    $scope.dropdownOpts = [
+      {'name': 'Portfolio'},
+      {'name': 'Resume'},
+      {'name': 'About'},
+      {'name': 'Contact'}
+    ];
+
+    $scope.placeholder = 'Portfolio';
+
+    $scope.landingCtrl.toggleDropdown = function() {
       $scope.isOpen = !$scope.isOpen;
-    }
+    };
+
+    $scope.landingCtrl.optSelected = function(optSelected) {
+      $scope.placeholder = optSelected;
+    };
   }
   controller.$inject = ['$scope'];
 }
