@@ -13,6 +13,7 @@ module.exports = {
     files: [
       'client/scripts/app.js',
       'client/scripts/app.config.js',
+      'client/scripts/app.run.js',
       'client/scripts/directives/*.js',
       'client/scripts/services/*.js',
       'client/scripts/controllers/*.js'

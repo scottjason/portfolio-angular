@@ -11,7 +11,7 @@ function ngDropdown() {
   };
   return directive;
 
-  function controller($scope, $window) {
+  function controller($scope, $window, $state) {
 
     $scope.dropdownOpts = [{
       'name': 'Portfolio'
@@ -38,6 +38,8 @@ function ngDropdown() {
     };
 
     $scope.landingCtrl.optSelected = function(optSelected) {
+      if (optSelected === 'Contact') $state.go('landing.contact');
+      if (optSelected === 'Portfolio') $state.go('landing.portfolio');
       $window.scrollTo(0, 0);
       $scope.placeholder = optSelected;
       $scope.reset(function() {
@@ -48,5 +50,5 @@ function ngDropdown() {
       });
     };
   }
-  controller.$inject = ['$scope', '$window'];
+  controller.$inject = ['$scope', '$window', '$state'];
 }

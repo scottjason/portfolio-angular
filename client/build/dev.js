@@ -16,9 +16,15 @@ angular.module('Portfolio')
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl as landingCtrl'
       })
+      .state('landing.portfolio', {
+        url: 'portfolio',
+        templateUrl: 'views/includes/portfolio.html',
+        controller: 'PortfolioCtrl as portfolioCtrl'
+      })
     $stateProvider
-      .state('interface', {
-        templateUrl: 'views/interface.html',
+      .state('landing.contact', {
+        url: 'contact',
+        templateUrl: 'views/includes/contact.html',
         controller: 'LandingCtrl as landingCtrl'
       })
 
@@ -26,6 +32,14 @@ angular.module('Portfolio')
     $locationProvider.html5Mode(true);
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
   });
+
+
+'use strict';
+
+angular.module('Portfolio')
+  .run(['$rootScope', '$window', '$state', function($rootScope, $window, $state) {
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {});
+  }]);
 
 
 angular
@@ -41,7 +55,7 @@ function ngDropdown() {
   };
   return directive;
 
-  function controller($scope, $window) {
+  function controller($scope, $window, $state) {
 
     $scope.dropdownOpts = [{
       'name': 'Portfolio'
@@ -68,6 +82,8 @@ function ngDropdown() {
     };
 
     $scope.landingCtrl.optSelected = function(optSelected) {
+      if (optSelected === 'Contact') $state.go('landing.contact');
+      if (optSelected === 'Portfolio') $state.go('landing.portfolio');
       $window.scrollTo(0, 0);
       $scope.placeholder = optSelected;
       $scope.reset(function() {
@@ -78,7 +94,7 @@ function ngDropdown() {
       });
     };
   }
-  controller.$inject = ['$scope', '$window'];
+  controller.$inject = ['$scope', '$window', '$state'];
 }
 
 
@@ -111,7 +127,7 @@ function ngScroll($rootScope, $window) {
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
 
   $scope.user = {};
 
@@ -135,12 +151,14 @@ function LandingCtrl($scope, $rootScope, $timeout, $window) {
       $scope.fadeWelcome = true;
       $timeout(function() {
         $scope.showPortfolio = true;
-        $timeout(function() {
+        // $timeout(function() {
           $scope.fadeInTitle = true;
-          $timeout(function() {
+        //   $timeout(function() {
             $scope.fadeInLocation = true;
-          }, 300);
-        }, 700);
+        $state.go('landing.portfolio');
+            
+        //   }, 300);
+        // }, 700);
       }, 120);
     });
   };
@@ -153,5 +171,18 @@ function LandingCtrl($scope, $rootScope, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
+}
+
+
+'use strict';
+
+angular.module('Portfolio')
+  .controller('PortfolioCtrl', PortfolioCtrl);
+
+function PortfolioCtrl($scope, $rootScope, $timeout, $window) {
+
+  console.log("#### PortfolioCtrl");
+
+  PortfolioCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
 }

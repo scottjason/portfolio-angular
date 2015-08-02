@@ -1,10 +1,7 @@
-<div ng-show='showPortfolio' ng-class='{ "show-portfolio" : ( showPortfolio || Portfolio ), "show-contact": ( Contact ) }' class='overlay-content'>
-
-<div ng-include src="'views/includes/contact.html'"></div>
-
+<div ng-show='showPortfolio && !Contact' ng-class='{ "show-portfolio" : ( showPortfolio || Portfolio )}' class='portfolio-overlay'>
 
   <!-- Portfolio Content -->
-  <div ng-hide='Contact'>
+  <div>
     <p class='work-type'>Professional Work</p>
     <div class='article-header'>
       <a ng-click='landingCtrl.onCompanySelected("https://stanza.co/");' class='company-name' href="">Stanza</a>

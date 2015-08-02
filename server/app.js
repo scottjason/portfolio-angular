@@ -5,10 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
 var config = require('./config');
 
 var app = express();
+
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 app.set('port', process.env.PORT || 3000);
 
@@ -29,7 +31,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(config.root, 'client')));
 
-app.use('/', routes);
+require('./routes/index')(app, io);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -55,7 +57,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(app.get('port'), function() {
+
+
+server.listen(app.get('port'), function() {
   console.log('Server listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode');
 });
 

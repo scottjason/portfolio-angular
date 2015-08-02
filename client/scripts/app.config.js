@@ -9,9 +9,15 @@ angular.module('Portfolio')
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl as landingCtrl'
       })
+      .state('landing.portfolio', {
+        url: 'portfolio',
+        templateUrl: 'views/includes/portfolio.html',
+        controller: 'PortfolioCtrl as portfolioCtrl'
+      })
     $stateProvider
-      .state('interface', {
-        templateUrl: 'views/interface.html',
+      .state('landing.contact', {
+        url: 'contact',
+        templateUrl: 'views/includes/contact.html',
         controller: 'LandingCtrl as landingCtrl'
       })
 

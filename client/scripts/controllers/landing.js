@@ -3,7 +3,7 @@
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
 
   $scope.user = {};
 
@@ -27,12 +27,14 @@ function LandingCtrl($scope, $rootScope, $timeout, $window) {
       $scope.fadeWelcome = true;
       $timeout(function() {
         $scope.showPortfolio = true;
-        $timeout(function() {
+        // $timeout(function() {
           $scope.fadeInTitle = true;
-          $timeout(function() {
+        //   $timeout(function() {
             $scope.fadeInLocation = true;
-          }, 300);
-        }, 700);
+        $state.go('landing.portfolio');
+            
+        //   }, 300);
+        // }, 700);
       }, 120);
     });
   };
@@ -45,5 +47,5 @@ function LandingCtrl($scope, $rootScope, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
 }
