@@ -23,7 +23,7 @@ module.exports = {
     }
   },
   styles: {
-    files: ['client/styles/*.css'],
+    files: ['client/styles/**/*.css'],
     tasks: ['concat:dev_styles', 'cssmin'],
     options: {
       spawn: false,

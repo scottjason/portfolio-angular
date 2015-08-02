@@ -6,7 +6,6 @@ exports.getOpts = function(grunt) {
     clean: require('./clean'),
     concat: require('./concat'),
     concurrent: require('./concurrent'),
-    copy: require('./copy'),
     cssmin: require('./cssmin'),
     nodemon: require('./nodemon'),
     uglify: require('./uglify'),

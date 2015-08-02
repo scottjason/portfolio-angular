@@ -41,7 +41,7 @@ function ngDropdown() {
   };
   return directive;
 
-  function controller($scope) {
+  function controller($scope, $window) {
 
     $scope.dropdownOpts = [
       {'name': 'Portfolio'},
@@ -57,10 +57,35 @@ function ngDropdown() {
     };
 
     $scope.landingCtrl.optSelected = function(optSelected) {
+      $window.scrollTo(0, 0);
       $scope.placeholder = optSelected;
     };
   }
-  controller.$inject = ['$scope'];
+  controller.$inject = ['$scope', '$window'];
+}
+
+
+angular
+  .module('Portfolio')
+  .directive('ngScroll', ngScroll);
+
+function ngScroll($rootScope, $window) {
+  var directive = {
+    link: link
+  };
+  return directive;
+
+  function link(scope, element, attr) {
+    angular.element($window).bind("scroll", function() {
+      if ($window.pageYOffset >= 90) {
+        $rootScope.$broadcast('dropdown:setFixed');
+      } else {
+        $rootScope.$broadcast('dropdown:setAbsolute');
+      }
+    });
+  };
+
+  ngScroll.$inject = ['$rootScope', '$window'];
 }
 
 
@@ -69,9 +94,21 @@ function ngDropdown() {
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $timeout, $window) {
 
-  var ctrl = this;
+  $rootScope.$on('dropdown:setFixed', function() {
+    $scope.fixDropdown = true;
+    if (!$scope.$$phase) {
+      $scope.$apply();
+    }
+  });
+
+  $rootScope.$on('dropdown:setAbsolute', function() {
+    $scope.fixDropdown = false;
+    if (!$scope.$$phase) {
+      $scope.$apply();
+    }
+  });
 
   this.onWelcome = function() {
     $timeout(function() {
@@ -96,5 +133,5 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
 }

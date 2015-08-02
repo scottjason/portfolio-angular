@@ -3,9 +3,21 @@
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $timeout, $window) {
 
-  var ctrl = this;
+  $rootScope.$on('dropdown:setFixed', function() {
+    $scope.fixDropdown = true;
+    if (!$scope.$$phase) {
+      $scope.$apply();
+    }
+  });
+
+  $rootScope.$on('dropdown:setAbsolute', function() {
+    $scope.fixDropdown = false;
+    if (!$scope.$$phase) {
+      $scope.$apply();
+    }
+  });
 
   this.onWelcome = function() {
     $timeout(function() {
@@ -30,5 +42,5 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
 }
