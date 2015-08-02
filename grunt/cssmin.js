@@ -9,10 +9,5 @@ module.exports = {
     files: {
       'client/build/dev.min.css': ['client/build/dev.css']
     }
-  },
-  vendor_styles: {
-    files: {
-      'client/build/vendor.min.css': ['client/build/vendor.css']
-    }
   }
 };
