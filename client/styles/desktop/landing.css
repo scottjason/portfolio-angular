@@ -18,4 +18,10 @@
     position: absolute;
     margin-left: 13px;
   }
+  .social-container {
+    display: none;
+  }
+  .dropdown-wrap {
+    display: none;
+  }
 }

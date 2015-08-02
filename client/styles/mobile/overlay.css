@@ -21,13 +21,16 @@
     text-align: center;
   }
   .article-line {
-  	color: white;
-  	 width: 60%;
-  	 margin: auto;
-  	 bottom: 10px;
+    color: white;
+    width: 60%;
+    margin: auto;
+    bottom: 10px;
   }
   .interval-and-location {
     font-size: 11px;
     white-space: nowrap;
+  }
+  .article-header {
+    text-align: center;
   }
 }
