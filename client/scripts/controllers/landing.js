@@ -11,7 +11,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $timeout(function() {
       $scope.fadeWelcome = true;
       $timeout(function() {
-        $scope.showOverlay = true;
+        $scope.showPortfolio = true;
         $timeout(function() {
           $scope.fadeInTitle = true;
           $timeout(function() {

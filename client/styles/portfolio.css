@@ -13,7 +13,6 @@
   border-bottom: transparent;
   border-radius: 15px 15px 0 0;
   padding: 20px;
-  opacity: 0;
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
   -o-transition: all .7s ease;
@@ -22,7 +21,6 @@
 }
 
 .overlay-content.show-overlay {
-  opacity: 1;
   height: 100%;
   width: 80%;
 }
