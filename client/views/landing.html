@@ -2,33 +2,37 @@
 <!-- Start NavBar  -->
 <div ng-show='showOverlay' class='navbar-container'>
   <div class='navbar-container-inner'>
-    <!-- <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p> -->
-    <div class='navbar-right-container'>
-      <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
-        <p class='navbar-copy work'>work<span class='navbar-spacer'></span></p>
-        <p class='navbar-copy resume'>resume<span class='navbar-spacer'></span></p>
-        <p class='navbar-copy about'>about<span class='navbar-spacer'></span></p>
+    <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
+<div ng-include src="'views/dropdown.html'"></div>
+
+    <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
+      <div class='navbar-block portfolio'>
+        <p class='navbar-copy work'>Portfolio</p>
+      </div>
+      <div class='navbar-block'>
+        <p class='navbar-copy resume'>resume</p>
+      </div>
+      <div class='navbar-block'>
+        <p class='navbar-copy about'>about</p>
+      </div>
+      <div class='navbar-block'>
         <p class='navbar-copy contact'>contact</p>
       </div>
     </div>
   </div>
 </div>
-
 <!-- Start Welcome  -->
 <div ng-init='landingCtrl.initialize();' class='landing-container'>
   <div ng-class='{ "fade-out" : ( fadeWelcome ) }' class='landing-container-inner'>
     <p class='landing-title'>Scott Jason</p>
     <div class='landing-line'></div>
     <p class='landing-subtitle'>Software Engineer | San Francisco, CA</p>
-    <!-- <div ng-click='landingCtrl.onWelcome();' class='welcome-btn'> -->
-      <!-- <p>Welcome</p> -->
-    <!-- </div> -->
+    <div ng-click='landingCtrl.onWelcome();' class='welcome-btn'>
+      <p>Welcome</p>
+    </div>
   </div>
 </div>
-
-
 <!-- Start Ovlerlay Main Body  -->
-
 <div ng-show='showOverlay' ng-class='{ "show-overlay" : ( showOverlay ) }' class='landing-overlay-content'>
   <p class='work-type'>Professional Work</p>
   <p class='company-name'>Stanza</p>
@@ -63,8 +67,4 @@
     <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </div>
-
-
-
-
 <!-- </div> -->

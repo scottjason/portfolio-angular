@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 60px;
+    bottom: 25px;
     width: 628px;
     height: 210px;
     margin: auto;
@@ -13,8 +13,27 @@
   .landing-line {
     width: 350px;
   }
-  .landing-subtitle {
-    /*top: 25px;*/
-    /*width: 280px;*/
+  .navbar-copy.title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    font-size: 32px;
+    margin: auto;
+    text-align: center;
+    z-index: 3;
+  }
+  .navbar-tab {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 97px;
+    width: 420px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #efefef;
+    border-radius: 4px 5px 0 0;
+    text-transform: capitalize;
+    margin: auto;
   }
 }

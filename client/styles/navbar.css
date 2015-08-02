@@ -1,3 +1,32 @@
+
+.navbar-block.portfolio:hover {
+  background: #fa9581;
+  color: white;
+}
+
+.navbar-block.portfolio {
+  cursor: pointer;
+}
+
+.navbar-block.portfolio p {
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.navbar-block.portfolio {
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.navbar-block.portfolio p:hover {
+  color: white;
+}
+
 .article-text {
   color: white;
   padding-top: 20px;
@@ -65,7 +94,7 @@
   position: absolute;
   z-index: 8;
   width: 100%;
-  height: 110px;
+  height: 130px;
   left: 0;
   top: 0;
   margin: auto;
@@ -86,23 +115,6 @@
   display: inline-block;
 }
 
-.navbar-copy.title {
-  display: inline-block;
-  opacity: 0;
-}
-
-
-/*.navbar-right-container {
-  position: absolute;
-  margin: 0;
-  font-weight: 400;
-  top: 26px;
-  float: right;
-  padding-right: 14%;
-  font-size: 18px;
-}
-*/
-
 
 /*orange  color: #fa9581;*/
 
@@ -120,33 +132,46 @@
 }
 
 .navbar-copy.title {
-  position: absolute;
   font-size: 42px;
   margin: 0;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  display: inline-block;
+  opacity: 0;
+  top: 20px;
+  position: relative;
 }
 
 .navbar-tab {
   position: absolute;
   right: 160px;
-  top: 77px;
-  width: 340px;
+  top: 97px;
+  width: 419px;
   text-align: center;
   font-size: 14px;
-  height: 31px;
-  bottom: 16px;
   background-color: #efefef;
-  border: 1px solid;
   border-radius: 4px 5px 0 0;
   text-transform: capitalize;
-  word-spacing: 23px;
-  opacity: 0;
+}
+
+.navbar-block {
+  display: inline-block;
+  width: 102px;
+  height: 32px;
+  background: #efefef;
+  position: relative;
 }
 
 .navbar-copy.work,
 .navbar-copy.resume,
 .navbar-copy.about,
 .navbar-copy.contact {
-  color: black;
+  position: relative;
+  display: inline-block;
+  color: grey;
+  font-weight: 400;
   margin: 0 5px 0 5px;
 }
 
@@ -158,10 +183,8 @@
 .navbar-copy.about.fade-in,
 .navbar-copy.contact.fade-in {
   opacity: 1;
-  -webkit-transition: all .2s ease-in;
-  -moz-transition: all .2s ease-in;
-  -ms-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  transition: all .2s ease-in;
 }
+
+
+
 

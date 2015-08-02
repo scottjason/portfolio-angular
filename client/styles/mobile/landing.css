@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 60px;
+    bottom: 25px;
     width: 280px;
     height: 210px;
     margin: auto;
@@ -28,5 +28,20 @@
   }
   .welcome-btn > p {
     font-size: 14px;
+    top: 5px;
   }
+  .navbar-copy.title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    z-index: 3;
+  }
+  .navbar-block {
+    display: none;
+  }
+
 }

@@ -9,7 +9,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
 .inline-block {
   display: inline-block;
 }
@@ -18,4 +17,8 @@ body {
   width: 100%;
   position: relative;
   height: 16px;
+}
+
+ul {
+  list-style-type: none;
 }

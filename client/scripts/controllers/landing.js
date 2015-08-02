@@ -7,6 +7,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
 
   var ctrl = this;
 
+  $scope.isOpen = null;
+
+  $scope.dropdownOpts = [
+    {'name': 'Portfolio'},
+    {'name': 'Resume'}
+  ]
+
   this.onWelcome = function() {
     $timeout(function() {
       $scope.fadeWelcome = true;
@@ -20,6 +27,14 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
         }, 700);
       }, 120);
     });
+  };
+
+  this.toggleDropDown = function($event) {
+    if ($scope.isOpen) {
+      $scope.isOpen = false;
+    } else {
+      $scope.isOpen = true;
+    }
   };
 
 
