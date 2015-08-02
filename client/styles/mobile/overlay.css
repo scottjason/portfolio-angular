@@ -25,6 +25,9 @@
   	 width: 60%;
   	 margin: auto;
   	 bottom: 10px;
-  	/*display: none;*/
+  }
+  .interval-and-location {
+    font-size: 11px;
+    white-space: nowrap;
   }
 }

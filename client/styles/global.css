@@ -9,6 +9,19 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -17,9 +30,4 @@ body {
   width: 100%;
   position: relative;
   height: 16px;
-}
-
-ul {
-  background: red;
-  list-style-type: none;
 }

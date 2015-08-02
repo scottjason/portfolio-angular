@@ -26,5 +26,9 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $window.open(url);
   };
 
+  this.onCompanySelected = function(url) {
+    $window.open(url);
+  };
+
   LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
 }

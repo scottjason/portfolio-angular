@@ -1,14 +1,18 @@
-<div ng-show='showOverlay' ng-class='{ "show-overlay" : ( showOverlay ) }' class='landing-overlay-content'>
-  <p class='work-type'>Professional Work</p>
-  <p class='company-name'>Stanza</p>
-  <div class='article-line'></div>
-  <p class='role-name'>Software Engineer</p>
-  <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
+<div ng-show='showOverlay' ng-class='{ "show-overlay" : ( showOverlay ) }' class='overlay-content'>
+    <p class='work-type'>Professional Work</p>
+    <div class='article-header'>
+    <a  ng-click='landingCtrl.onCompanySelected("https://stanza.co/");' class='company-name' href="">Stanza</a>
+    </div>
+    <div class='article-line'></div>
+    <p class='role-name'>Software Engineer</p>
+    <p class="interval-and-location">March 2015 - Present | San Francisco, Ca</p>
   <div class='article-text-container'>
     <p class='article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class='work-spacer'></div>
-  <p class='company-name'>Interact</p>
+    <div class='article-header'>
+    <a ng-click='landingCtrl.onCompanySelected("https://www.tryinteract.com/");' class='company-name' href="">Interact</a>
+    </div>
   <div class='article-line'></div>
   <p class='role-name'>Software Engineer</p>
   <p class="interval-and-location">December 2014 - March 2015 | San Francisco, Ca</p>

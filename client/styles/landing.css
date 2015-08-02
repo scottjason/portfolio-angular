@@ -121,29 +121,4 @@
   font-weight: 300;
 }
 
-.landing-overlay-content {
-  position: relative;
-  background-color: rgba(0, 0, 0, .5);
-  left: 0;
-  right: 0;
-  top: 130px;
-  margin: auto;
-  height: 0;
-  width: 0;
-  border: 1px solid rgba(225, 225, 225, .6);
-  border-bottom: transparent;
-  border-radius: 15px 15px 0 0;
-  padding: 20px;
-  -webkit-transition: all .7s ease;
-  -moz-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  transition: all .7s ease;
-  opacity: 0;
-}
 
-.landing-overlay-content.show-overlay {
-  opacity: 1;
-  height: 100%;
-  width: 80%;
-}

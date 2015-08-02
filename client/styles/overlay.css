@@ -1,0 +1,108 @@
+/* Main Overlay Content Container */
+
+.overlay-content {
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  top: 130px;
+  margin: auto;
+  height: 0;
+  width: 0;
+  border: 1px solid rgba(225, 225, 225, .6);
+  border-bottom: transparent;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.overlay-content.show-overlay {
+  opacity: 1;
+  height: 100%;
+  width: 80%;
+}
+
+
+/* Article Container */
+
+.article-container {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  display: none;
+  height: 100%;
+}
+
+.article-container.unhide {
+  display: block;
+}
+
+.article-text {
+  color: white;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  width: 97%;
+}
+
+.article-line {
+  position: relative;
+  width: 250px;
+  height: 0px;
+  top: 5px;
+  border-bottom: 1px solid #efefef;
+}
+
+.work-type {
+  color: #fa9581;
+  position: relative;
+  width: 200px;
+}
+
+.article-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.company-name {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  top: 10px;
+  width: auto;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+a.company-name:hover {
+  color: #fa9581;
+}
+
+.role-name {
+  font-size: 14px;
+  color: #46A8E5;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.interval-and-location {
+  padding-top: 1px;
+  font-size: 13px;
+  color: #fff;
+  margin: 0;
+}
