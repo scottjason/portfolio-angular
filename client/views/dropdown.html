@@ -1,7 +1,7 @@
 <div id='dropdown-toggle' ng-click='landingCtrl.toggleDropdown();'>
   <div id='dropdown-wrap' class='dropdown-wrap' ng-class='{ "on-open" : (isOpen) }'>
   <p ng-hide='isOpen' class='placeholder'> {{ placeholder }} </p>
-    <i ng-hide='isOpen'  class="fa fa-caret-down"></i>
+    <i ng-hide='isOpen'  class="icon-caret-down"></i>
     <p id='dropdown-opt' class='dropdown-opt' ng-class='{ "on-open" : (isOpen) }' ng-click='landingCtrl.optSelected(opt.name);' ng-repeat='opt in dropdownOpts'>{{ opt.name }}</p>
   </div>
 </div>

@@ -3,7 +3,7 @@
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
 
   var ctrl = this;
 
@@ -22,5 +22,9 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
     });
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout'];
+  this.onShareOpt = function(url) {
+    $window.open(url);
+  };
+
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
 }

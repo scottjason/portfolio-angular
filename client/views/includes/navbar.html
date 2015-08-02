@@ -1,6 +1,14 @@
+<div ng-class="{ 'darken' : (isOpen) }"  class='landing-overlay'></div>
+
 <div ng-show='showOverlay' class='navbar-container'>
   <div class='navbar-container-inner'>
     <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
+
+    <div class='social-container'>
+      <i ng-click='landingCtrl.onShareOpt("https://github.com/scottjason")'class="icon-social-github"></i>
+      <i ng-click='landingCtrl.onShareOpt("https://linkedin.com/in/scottleejason")' class="icon-social-linkedin"></i>
+      <i ng-click='landingCtrl.onShareOpt("https://twitter.com/scottleejason")' class="icon-social-twitter"></i>
+    </div>
 
     <ng-dropdown></ng-dropdown>
 

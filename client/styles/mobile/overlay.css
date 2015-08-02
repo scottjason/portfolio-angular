@@ -1,0 +1,30 @@
+@media (min-width: 320px) and (max-width: 568px) {
+  .interval-and-location {
+    font-size: 12px;
+  }
+  .work-type {
+    color: #fa9581;
+    position: relative;
+    width: auto;
+    text-align: center;
+    padding-bottom: 6px;
+    padding-top: 30px;
+    font-size: 22px;
+  }
+  .work-type:nth-child(1) {
+    padding-top: 0px !important;
+  }
+  .company-name,
+  .role-name,
+  .interval-and-location,
+  .article-text {
+    text-align: center;
+  }
+  .article-line {
+  	color: white;
+  	 width: 60%;
+  	 margin: auto;
+  	 bottom: 10px;
+  	/*display: none;*/
+  }
+}
