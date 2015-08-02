@@ -40,8 +40,52 @@
     text-align: center;
     z-index: 3;
   }
-  .navbar-block {
+  .navbar-tab {
     display: none;
   }
-
+  .dropdown-wrap div {
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .dropdown-wrap p {
+    text-align: center;
+    background-color: white;
+    color: #fa9581;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    opacity: 0;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .dropdown-wrap {
+    position: fixed;
+    background: #efefef;
+    width: 70%;
+    height: 40px;
+    left: 0;
+    margin: auto;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    top: 90px;
+    right: 0;
+    border-radius: 5px 5px 0 0;
+  }
+  .dropdown-wrap.on-open {
+    height: 188px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  .dropdown-wrap div.on-open,
+  .dropdown-wrap p.on-open {
+    opacity: 1;
+  }
 }

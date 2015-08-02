@@ -11,8 +11,10 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
 
   $scope.dropdownOpts = [
     {'name': 'Portfolio'},
-    {'name': 'Resume'}
-  ]
+    {'name': 'Resume'},
+    {'name': 'About'},
+    {'name': 'Contact'},
+  ];
 
   this.onWelcome = function() {
     $timeout(function() {
@@ -29,12 +31,12 @@ function LandingCtrl($scope, $rootScope, $state, $timeout) {
     });
   };
 
-  this.toggleDropDown = function($event) {
-    if ($scope.isOpen) {
-      $scope.isOpen = false;
-    } else {
-      $scope.isOpen = true;
-    }
+  this.toggleDropDown = function() {
+    $scope.isOpen = !$scope.isOpen;
+  };
+
+  this.optSelected = function(optSelected) {
+    console.log(optSelected);
   };
 
 
