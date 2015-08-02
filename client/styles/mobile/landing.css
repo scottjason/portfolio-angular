@@ -57,7 +57,8 @@
     background-color: white;
     color: #fa9581;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
     margin: 0;
     opacity: 0;
     -moz-transition: all .3s ease;
@@ -82,10 +83,10 @@
   }
   .dropdown-wrap.on-open {
     height: 188px;
-    border-radius: 5px 5px 5px 5px;
   }
   .dropdown-wrap div.on-open,
   .dropdown-wrap p.on-open {
     opacity: 1;
+    border-radius: 5px 5px 0 0;
   }
 }
