@@ -7,8 +7,6 @@
 var path = require('path');
 var env = require('../../env.json') || {};
 
-console.log(env)
-
 module.exports = {
   server: {
     port: process.env.PORT || 3000

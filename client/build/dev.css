@@ -699,6 +699,19 @@ a.company-name:hover {
 }
 
 
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .work-type {
+      width: auto;
+      padding-bottom: 6px;
+      padding-top: 30px;
+      font-size: 22px;
+    }
+    .work-type:nth-child(1) {
+      padding-top: 0px !important;
+    }
+  }
+
+
 @media (min-width: 320px) and (max-width: 568px) {
   .landing-container-inner {
     position: absolute;
