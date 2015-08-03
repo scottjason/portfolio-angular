@@ -10,7 +10,6 @@ var config = require('./config');
 var app = express();
 
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
 
 app.set('port', process.env.PORT || 3000);
 
@@ -31,7 +30,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(config.root, 'client')));
 
-require('./routes/index')(app, io);
+require('./routes/index')(app);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

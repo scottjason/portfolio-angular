@@ -3,7 +3,7 @@
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService, RequestApi) {
 
   var ctrl = this;
 
@@ -53,8 +53,16 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   ctrl.onSubmitContact = function(isValid) {
-    console.log('on onSubmitContact ctrl', isValid);
+    if (isValid) {
+      RequestApi.sendMessage($scope.user).then(function(response) {
+        console.log('response', response);
+      }, function(err) {
+        console.log(err);
+      });
+    } else {
+      console.log('render invalid input');
+    }
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService', 'RequestApi'];
 }

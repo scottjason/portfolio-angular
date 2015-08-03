@@ -166,6 +166,36 @@ function ngValidate($rootScope, StateService) {
 
 
 angular.module('Portfolio')
+  .service('RequestApi', function($http) {
+
+    'use strict'
+
+    function sendMessage(params) {
+      var request = $http({
+        method: 'POST',
+        url: '/',
+        data: params
+      });
+      return (request.then(successHandler, errorHandler));
+    }
+
+    function successHandler(response) {
+      return (response);
+    }
+
+    function errorHandler(response) {
+      return (response);
+    }
+
+    return ({
+      sendMessage: sendMessage,
+
+    });
+    RequestApi.$inject('$http');
+  });
+
+
+angular.module('Portfolio')
   .service('StateService', function() {
 
     'use strict'
@@ -196,7 +226,7 @@ angular.module('Portfolio')
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService, RequestApi) {
 
   var ctrl = this;
 
@@ -246,8 +276,16 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   ctrl.onSubmitContact = function(isValid) {
-    console.log('on onSubmitContact ctrl', isValid);
+    if (isValid) {
+      RequestApi.sendMessage($scope.user).then(function(response) {
+        console.log('response', response);
+      }, function(err) {
+        console.log(err);
+      });
+    } else {
+      console.log('render invalid input');
+    }
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService', 'RequestApi'];
 }
