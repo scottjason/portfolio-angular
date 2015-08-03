@@ -140,9 +140,6 @@ function ngValidate($rootScope, StateService) {
   function link(scope, element, attr) {
     element.bind('keydown keypress click', function($event) {
 
-      var isName = ($event.target.id === 'user-name');
-      var isEmail = ($event.target.id === 'user-email');
-      var isMessage = ($event.target.id === 'user-message');
       var isSubmitBtn = ($event.target.id === 'submit-btn' || $event.target.id === 'submit-btn-copy');
 
       var modelName = scope.$parent.user.name;
