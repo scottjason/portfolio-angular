@@ -1,0 +1,19 @@
+.contact-overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  top: 130px;
+  margin: auto;
+  height: 400px;
+  width: 80%;
+  border: 1px solid rgba(225, 225, 225, .6);
+  border-radius: 15px 15px 15px 15px;
+  padding: 20px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 30px;
+}
+
+.contact-form-btn > p {
+  cursor: pointer;
+}

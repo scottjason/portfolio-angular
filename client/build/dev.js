@@ -19,7 +19,7 @@ angular.module('Portfolio')
       .state('landing.portfolio', {
         url: 'portfolio',
         templateUrl: 'views/includes/portfolio.html',
-        controller: 'PortfolioCtrl as portfolioCtrl'
+        controller: 'LandingCtrl as landingCtrl'
       })
     $stateProvider
       .state('landing.contact', {
@@ -122,12 +122,94 @@ function ngScroll($rootScope, $window) {
 }
 
 
+angular
+  .module('Portfolio')
+  .directive('ngValidate', ngValidate);
+
+function ngValidate($rootScope, StateService) {
+  var directive = {
+    link: link
+  };
+  return directive;
+
+  function validateEmail(email) {
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return regex.test(email);
+  }
+
+  function link(scope, element, attr) {
+    element.bind('keydown click', function($event) {
+      console.log($event)
+
+      var isName = ($event.target.id === 'user-name');
+      var isEmail = ($event.target.id === 'user-email');
+      var isMessage = ($event.target.id === 'user-message');
+      var isSubmitBtn = ($event.target.id === 'submit-btn' || $event.target.id === 'submit-btn-copy');
+
+      var modelName = scope.$parent.user.name;
+      var modelEmail = scope.$parent.user.email;
+      var modelMessage = scope.$parent.user.message;
+
+      if (isName) {
+        StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
+      }
+      if (isEmail) {
+        var isValid = validateEmail(modelEmail);
+        StateService.data['ContactForm'].email.isValid = isValid ? true : false;
+      }
+      if (isMessage) {
+        StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+      }
+      if (isSubmitBtn) {
+        if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
+          $rootScope.$broadcast('contact:submitForm', true);
+        } else {
+          $rootScope.$broadcast('contact:submitForm', false);
+        }
+      }
+
+    });
+
+  };
+
+  ngValidate.$inject = ['$rootScope', 'StateService'];
+}
+
+
+angular.module('Portfolio')
+  .service('StateService', function() {
+
+    'use strict'
+
+    var data = {
+      'ContactForm': {
+        'name': {
+          'isValid': false
+        },
+        'email': {
+          'isValid': false
+        },
+        'message': {
+          'isValid': false
+        },
+        'isValid': false
+      }
+    };
+
+    return ({
+      data: data,
+    });
+  });
+
+
 'use strict';
 
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService) {
+
+  var ctrl = this;
 
   $scope.user = {};
 
@@ -146,19 +228,18 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     }
   });
 
+  $rootScope.$on('contact:submitForm', function(event, isValid) {
+    ctrl.onSubmitContact(isValid);
+  });
+
   this.onWelcome = function() {
     $timeout(function() {
       $scope.fadeWelcome = true;
       $timeout(function() {
         $scope.showPortfolio = true;
-        // $timeout(function() {
-          $scope.fadeInTitle = true;
-        //   $timeout(function() {
-            $scope.fadeInLocation = true;
+        $scope.fadeInTitle = true;
+        $scope.fadeInLocation = true;
         $state.go('landing.portfolio');
-            
-        //   }, 300);
-        // }, 700);
       }, 120);
     });
   };
@@ -171,18 +252,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
-}
+  this.isValid = function(key) {
+    return StateService.data['ContactForm'][key].isValid;
+  };
 
+  ctrl.onSubmitContact = function(isValid) {
+    console.log('on onSubmitContact ctrl', isValid);
+  };
 
-'use strict';
-
-angular.module('Portfolio')
-  .controller('PortfolioCtrl', PortfolioCtrl);
-
-function PortfolioCtrl($scope, $rootScope, $timeout, $window) {
-
-  console.log("#### PortfolioCtrl");
-
-  PortfolioCtrl.$inject['$scope', '$rootScope', '$timeout', '$window'];
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService'];
 }

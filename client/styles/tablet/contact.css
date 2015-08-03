@@ -16,6 +16,7 @@
     border: none;
     border-bottom: 1px solid #efefef;
     margin-bottom: 30px;
+    padding-top: 30px;
   }
   .contact-name:nth-child(1),
   .contact-email:nth-child(1) {

@@ -12,7 +12,7 @@ angular.module('Portfolio')
       .state('landing.portfolio', {
         url: 'portfolio',
         templateUrl: 'views/includes/portfolio.html',
-        controller: 'PortfolioCtrl as portfolioCtrl'
+        controller: 'LandingCtrl as landingCtrl'
       })
     $stateProvider
       .state('landing.contact', {

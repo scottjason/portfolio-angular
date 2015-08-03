@@ -3,7 +3,9 @@
 angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
-function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
+function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService) {
+
+  var ctrl = this;
 
   $scope.user = {};
 
@@ -22,19 +24,18 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     }
   });
 
+  $rootScope.$on('contact:submitForm', function(event, isValid) {
+    ctrl.onSubmitContact(isValid);
+  });
+
   this.onWelcome = function() {
     $timeout(function() {
       $scope.fadeWelcome = true;
       $timeout(function() {
         $scope.showPortfolio = true;
-        // $timeout(function() {
-          $scope.fadeInTitle = true;
-        //   $timeout(function() {
-            $scope.fadeInLocation = true;
+        $scope.fadeInTitle = true;
+        $scope.fadeInLocation = true;
         $state.go('landing.portfolio');
-            
-        //   }, 300);
-        // }, 700);
       }, 120);
     });
   };
@@ -47,5 +48,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window) {
     $window.open(url);
   };
 
-  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window'];
+  this.isValid = function(key) {
+    return StateService.data['ContactForm'][key].isValid;
+  };
+
+  ctrl.onSubmitContact = function(isValid) {
+    console.log('on onSubmitContact ctrl', isValid);
+  };
+
+  LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService'];
 }

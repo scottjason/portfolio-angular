@@ -31,3 +31,10 @@ ul {
   position: relative;
   height: 16px;
 }
+
+.err-message {
+  position: absolute;
+  font-size: 12px;
+  color: #fa9581;
+  left: 7%;
+}

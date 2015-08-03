@@ -1,8 +1,13 @@
-<div ng-show='Contact' class='contact-overlay'>
+<div ng-validate ng-show='Contact' class='contact-overlay'>
   <div class='contact-form'>
-  <input class='contact-name' type='text' placeholder='your name' ng-model='user.name'>
-  <input class='contact-email' type='text' placeholder='your email' ng-model='user.email'>
-  <textarea class='contact-message' placeholder='enter your message...' ng-model='user.message'></textarea>
-  <div class='contact-form-btn'><p>Submit</p></div>
+    <p ng-hide='landingCtrl.isValid("name") || !user.name.length' class='err-message'>please enter a valid name</p>
+    <input id='user-name' class='contact-name' type='text' placeholder='your name' ng-model='user.name'>
+    <p ng-hide='landingCtrl.isValid("email") || !user.email.length' class='err-message'>please enter a valid email</p>
+    <input id='user-email' class='contact-email' type='text' placeholder='your email' ng-model='user.email'>
+    <p ng-hide='landingCtrl.isValid("message") || !user.message.length' class='err-message'>please enter a valid message</p>
+    <textarea id='user-message' class='contact-message' placeholder='enter your message...' ng-model='user.message'></textarea>
+    <div id='submit-btn' ng-click='landingCtrl.submitContact();' class='contact-form-btn'>
+      <p id='submit-btn-copy' ng-click='landingCtrl.submitContact();'>Submit</p>
+    </div>
   </div>
 </div>

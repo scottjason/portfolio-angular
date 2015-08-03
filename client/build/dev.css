@@ -32,6 +32,14 @@ ul {
   height: 16px;
 }
 
+.err-message {
+  position: absolute;
+  font-size: 12px;
+  color: #fa9581;
+  left: 7%;
+}
+
+
 /* Navbar Container */
 
 .navbar-container {
@@ -310,7 +318,7 @@ ul {
   padding: 20px;
 }
 
-.contact-overlay {
+/*.contact-overlay {
   position: relative;
   background-color: rgba(0, 0, 0, .5);
   left: 0;
@@ -320,7 +328,7 @@ ul {
   height: 400px;
   width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 15px 15px;
   padding: 20px;
   border-bottom: 1px solid #efefef;
   padding-bottom: 30px;
@@ -331,7 +339,7 @@ ul {
   border-bottom: 1px solid #efefef;
   padding-bottom: 30px;
 }
-
+*/
 
 /* Article Container */
 
@@ -410,6 +418,27 @@ a.company-name:hover {
   font-size: 13px;
   color: #fff;
   margin: 0;
+}
+
+
+.contact-overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  top: 130px;
+  margin: auto;
+  height: 400px;
+  width: 80%;
+  border: 1px solid rgba(225, 225, 225, .6);
+  border-radius: 15px 15px 15px 15px;
+  padding: 20px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 30px;
+}
+
+.contact-form-btn > p {
+  cursor: pointer;
 }
 
 
@@ -634,6 +663,7 @@ a.company-name:hover {
     border: none;
     border-bottom: 1px solid #efefef;
     margin-bottom: 30px;
+    padding-top: 30px;
   }
   .contact-name:nth-child(1),
   .contact-email:nth-child(1) {
