@@ -14,7 +14,7 @@ function ngValidate($rootScope, StateService) {
   }
 
   function link(scope, element, attr) {
-    element.bind('keydown click', function($event) {
+    element.bind('keydown keypress click', function($event) {
       console.log($event)
 
       var isName = ($event.target.id === 'user-name');
@@ -26,16 +26,11 @@ function ngValidate($rootScope, StateService) {
       var modelEmail = scope.$parent.user.email;
       var modelMessage = scope.$parent.user.message;
 
-      if (isName) {
-        StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
-      }
-      if (isEmail) {
-        var isValid = validateEmail(modelEmail);
-        StateService.data['ContactForm'].email.isValid = isValid ? true : false;
-      }
-      if (isMessage) {
-        StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
-      }
+      StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
+      var isValid = validateEmail(modelEmail);
+      StateService.data['ContactForm'].email.isValid = isValid ? true : false;
+      StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+
       if (isSubmitBtn) {
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
           $rootScope.$broadcast('contact:submitForm', true);
