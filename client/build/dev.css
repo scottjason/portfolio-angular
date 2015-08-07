@@ -1,3 +1,4 @@
+
 body {
   margin: auto;
   overflow-x: hidden;
@@ -335,28 +336,28 @@ ul {
   padding: 20px;
 }
 
-/*.contact-overlay {
+.about-stanza-header {
   position: relative;
-  background-color: rgba(0, 0, 0, .5);
-  left: 0;
-  right: 0;
-  top: 130px;
-  margin: auto;
-  height: 400px;
-  width: 80%;
-  border: 1px solid rgba(225, 225, 225, .6);
-  border-radius: 15px 15px 15px 15px;
-  padding: 20px;
-  border-bottom: 1px solid #efefef;
-  padding-bottom: 30px;
+  color: #46A8E5;
+  padding-bottom: 10px;
+  font-size: 14px;
 }
 
-.portfolio-overlay.show-contact {
-  height: 400px;
-  border-bottom: 1px solid #efefef;
-  padding-bottom: 30px;
+.my-contributions {
+  position: relative;
+  color: #46A8E5;
+  font-size: 14px;
+  padding-bottom: 5px;
 }
-*/
+
+.about-stanza-body {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+
 
 /* Article Container */
 
@@ -373,12 +374,36 @@ ul {
   display: block;
 }
 
+div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
 .article-text {
-  color: white;
-  padding-top: 20px;
+  color: #fff;
   font-size: 14px;
   font-weight: 300;
-  width: 97%;
+  width: 97%; 
+  line-height: 1.5;
+}
+
+.article-stack {
+  color: white;
+  position: relative;
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+.article-tools {
+  color: white;
+  position: relative;
+  font-size: 13px;
+}
+
+.article-stack span,
+.article-tools span {
+  color: #fa9581;
+  padding-right: 5px;
 }
 
 .article-line {
@@ -387,6 +412,14 @@ ul {
   height: 0px;
   top: 5px;
   border-bottom: 1px solid #efefef;
+}
+
+.article-line.body {
+  position: relative;
+  width: 100px;
+  height: 0px;
+  border-bottom: 1px solid rgba(225, 225, 255, .7);
+  display: none;
 }
 
 .work-type {
@@ -426,7 +459,7 @@ a.company-name:hover {
 .role-name {
   font-size: 14px;
   color: #46A8E5;
-  padding-top: 10px;
+  padding-top: 15px;
   margin: 0;
 }
 
