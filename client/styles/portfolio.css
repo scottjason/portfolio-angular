@@ -62,7 +62,7 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
   color: #fff;
   font-size: 14px;
   font-weight: 300;
-  width: 97%; 
+  width: 97%;
   line-height: 1.5;
 }
 
@@ -104,7 +104,11 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
 .work-type {
   color: #fa9581;
   position: relative;
-  width: 200px;
+  font-size: 18px;
+}
+
+.work-type.projects {
+  padding-top: 30px;
 }
 
 .article-header {
