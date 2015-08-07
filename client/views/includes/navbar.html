@@ -13,17 +13,17 @@
     <ng-dropdown></ng-dropdown>
 
     <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
-      <div class='navbar-block portfolio'>
-        <p class='navbar-copy work'>Portfolio</p>
+      <div ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
+        <p ng-class='{ "on-hover" : ( onHoverPortolfio ) }' class='navbar-copy work'>Portfolio</p>
       </div>
-      <div class='navbar-block'>
-        <p class='navbar-copy resume'>resume</p>
+      <div ng-mouseover="onHoverResume = true" ng-mouseleave="onHoverResume = false" class='navbar-block resume'>
+        <p ng-class='{ "on-hover" : ( onHoverResume ) }' class='navbar-copy resume'>Resume</p>
       </div>
-      <div class='navbar-block'>
-        <p class='navbar-copy about'>about</p>
+      <div ng-mouseover="onHoverAbout = true" ng-mouseleave="onHoverAbout = false" class='navbar-block about'>
+        <p ng-class='{ "on-hover" : ( onHoverAbout ) }' class='navbar-copy about'>About</p>
       </div>
-      <div class='navbar-block'>
-        <p class='navbar-copy contact'>contact</p>
+      <div ng-mouseover="onHoverContact = true" ng-mouseleave="onHoverContact = false" class='navbar-block contact'>
+        <p ng-class='{ "on-hover" : ( onHoverContact ) }' class='navbar-copy contact'>Contact</p>
       </div>
     </div>
   </div>

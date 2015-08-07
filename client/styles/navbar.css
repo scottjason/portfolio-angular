@@ -28,36 +28,31 @@
   display: inline-block;
 }
 
-.navbar-block.portfolio:hover {
+.navbar-block.portfolio,
+.navbar-block.resume,
+.navbar-block.about,
+.navbar-block.contact {
+/*  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;*/
+  cursor: pointer;
+}
+
+.navbar-block.portfolio:hover,
+.navbar-block.resume:hover,
+.navbar-block.about:hover,
+.navbar-block.contact:hover {
   background: #fa9581;
-  color: white;
 }
 
-.navbar-block.portfolio {
+.navbar-block.portfolio p,
+.navbar-block.resume p,
+.navbar-block.about p,
+.navbar-block.contact p {
+
   cursor: pointer;
 }
-
-.navbar-block.portfolio p {
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-  cursor: pointer;
-}
-
-.navbar-block.portfolio {
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-}
-
-.navbar-block.portfolio p:hover {
-  color: white;
-}
-
-
-/*orange  color: #fa9581;*/
 
 .navbar-spacer {
   height: 20px;
@@ -75,10 +70,6 @@
 .navbar-copy.title {
   font-size: 42px;
   margin: 0;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
   display: inline-block;
   opacity: 0;
   top: 20px;
@@ -97,7 +88,9 @@
   text-transform: capitalize;
 }
 
+
 /* Navbar Option Container */
+
 .navbar-block {
   display: inline-block;
   width: 102px;
@@ -105,6 +98,7 @@
   background: #efefef;
   position: relative;
 }
+
 
 /* Navbar Options */
 
@@ -119,6 +113,17 @@
   margin: 0 5px 0 5px;
 }
 
+.navbar-copy.work.on-hover,
+.navbar-copy.resume.on-hover,
+.navbar-copy.about.on-hover,
+.navbar-copy.contact.on-hover {
+  /*color: #fa9581;*/
+  color: #fff;
+}
+
+
+/*on-hover*/
+
 
 /* Fade In Elements */
 
@@ -130,4 +135,12 @@
 .navbar-copy.about.fade-in,
 .navbar-copy.contact.fade-in {
   opacity: 1;
+}
+
+.navbar-spacer {
+  height: 20px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  margin-left: 13px;
 }
