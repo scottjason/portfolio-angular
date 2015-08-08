@@ -1,3 +1,33 @@
+.social-container {
+  position: absolute;
+  width: auto;
+  text-align: center;
+  font-size: 21px;
+  top: 145px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.icon-social-github,
+.icon-social-linkedin,
+.icon-social-twitter {
+  margin-left: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.icon-social-github:hover,
+.icon-social-linkedin:hover,
+.icon-social-twitter:hover {
+  color: #46A8E5;
+}
+
+
 /* Navbar Container */
 
 .navbar-container {
@@ -32,10 +62,6 @@
 .navbar-block.resume,
 .navbar-block.about,
 .navbar-block.contact {
-/*  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  transition: all .4s ease;*/
   cursor: pointer;
 }
 
@@ -50,7 +76,6 @@
 .navbar-block.resume p,
 .navbar-block.about p,
 .navbar-block.contact p {
-
   cursor: pointer;
 }
 
@@ -70,10 +95,9 @@
 .navbar-copy.title {
   font-size: 42px;
   margin: 0;
-  display: inline-block;
-  opacity: 0;
   top: 20px;
   position: relative;
+  right: 14px;
 }
 
 .navbar-tab {
@@ -117,7 +141,6 @@
 .navbar-copy.resume.on-hover,
 .navbar-copy.about.on-hover,
 .navbar-copy.contact.on-hover {
-  /*color: #fa9581;*/
   color: #fff;
 }
 

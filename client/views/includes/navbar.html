@@ -2,7 +2,7 @@
 
 <div ng-show='showPortfolio' class='navbar-container'>
   <div class='navbar-container-inner'>
-    <p ng-class='{ "fade-in" : ( fadeInTitle ) }' class='navbar-copy title'>Scott Jason</p>
+    <p class='navbar-copy title'>Scott Jason</p>
 
     <div class='social-container'>
       <i ng-click='landingCtrl.onShareOpt("https://github.com/scottjason")'class="icon-social-github"></i>
@@ -12,7 +12,7 @@
 
     <ng-dropdown></ng-dropdown>
 
-    <div ng-class='{ "fade-in" : ( fadeInLocation ) }' class='navbar-tab'>
+    <div  class='navbar-tab'>
       <div ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
         <p ng-class='{ "on-hover" : ( onHoverPortolfio ) }' class='navbar-copy work'>Portfolio</p>
       </div>

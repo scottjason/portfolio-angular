@@ -1,6 +1,5 @@
 @media (min-width: 1024px) {
-  .dropdown-wrap,
-  .social-container {
+  .dropdown-wrap {
     display: none;
   }
 }

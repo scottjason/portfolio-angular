@@ -14,7 +14,6 @@ angular.module('Portfolio')
         templateUrl: 'views/includes/portfolio.html',
         controller: 'LandingCtrl as landingCtrl'
       })
-    $stateProvider
       .state('landing.contact', {
         url: 'contact',
         templateUrl: 'views/includes/contact.html',

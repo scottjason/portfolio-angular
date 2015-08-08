@@ -33,8 +33,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
       $scope.fadeWelcome = true;
       $timeout(function() {
         $scope.showPortfolio = true;
-        $scope.fadeInTitle = true;
-        $scope.fadeInLocation = true;
         $state.go('landing.portfolio');
       }, 120);
     });
