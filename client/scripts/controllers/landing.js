@@ -9,6 +9,16 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
   $scope.user = {};
 
+  var resetNavbar = function() {
+    $scope.isPortfolio = false;
+    $scope.isContact = false;
+  }
+
+  var resetState = function() {
+    $scope.Portfolio = false;
+    $scope.Contact = false;
+  }
+
   $rootScope.$on('dropdown:setFixed', function() {
     console.log('on setFixed')
     $scope.fixDropdown = true;
@@ -26,6 +36,16 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
   $rootScope.$on('contact:submitForm', function(event, isValid) {
     ctrl.onSubmitContact(isValid);
+  });
+
+  $rootScope.$on('isPortfolio', function() {
+    resetNavbar();
+    $scope.isPortfolio = true;
+  });
+
+  $rootScope.$on('isContact', function() {
+    resetNavbar();
+    $scope.isContact = true;
   });
 
   this.onWelcome = function() {
@@ -49,6 +69,12 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   this.isValid = function(key) {
     return StateService.data['ContactForm'][key].isValid;
   };
+
+  this.navigate = function(state, condition) {
+    resetState();
+    $state.go(state);
+    $scope[condition] = true;
+  }
 
   ctrl.onSubmitContact = function(isValid) {
     if (isValid) {

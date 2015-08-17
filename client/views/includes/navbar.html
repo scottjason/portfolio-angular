@@ -12,18 +12,18 @@
 
     <ng-dropdown></ng-dropdown>
 
-    <div  class='navbar-tab'>
-      <div ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
-        <p ng-class='{ "on-hover" : ( onHoverPortolfio ) }' class='navbar-copy work'>Portfolio</p>
+    <div class='navbar-tab'>
+      <div ng-class="{ 'is-active' : (isPortfolio) }" ng-click='landingCtrl.navigate("landing.portfolio", "Portfolio")'  ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
+        <p ng-class="{ 'is-active' : (isPortfolio) }" class='navbar-copy work'>Portfolio</p>
       </div>
       <div ng-mouseover="onHoverResume = true" ng-mouseleave="onHoverResume = false" class='navbar-block resume'>
-        <p ng-class='{ "on-hover" : ( onHoverResume ) }' class='navbar-copy resume'>Resume</p>
+        <p  class='navbar-copy resume'>Resume</p>
       </div>
       <div ng-mouseover="onHoverAbout = true" ng-mouseleave="onHoverAbout = false" class='navbar-block about'>
-        <p ng-class='{ "on-hover" : ( onHoverAbout ) }' class='navbar-copy about'>About</p>
+        <p class='navbar-copy about'>About</p>
       </div>
-      <div ng-mouseover="onHoverContact = true" ng-mouseleave="onHoverContact = false" class='navbar-block contact'>
-        <p ng-class='{ "on-hover" : ( onHoverContact ) }' class='navbar-copy contact'>Contact</p>
+      <div ng-class="{ 'is-active' : (isContact) }" ng-click='landingCtrl.navigate("landing.contact", "Contact")' ng-mouseover="onHoverContact = true" ng-mouseleave="onHoverContact = false" class='navbar-block contact'>
+        <p ng-class="{ 'is-active' : (isContact) }" class='navbar-copy contact'>Contact</p>
       </div>
     </div>
   </div>

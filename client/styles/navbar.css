@@ -65,11 +65,14 @@
   cursor: pointer;
 }
 
-.navbar-block.portfolio:hover,
-.navbar-block.resume:hover,
-.navbar-block.about:hover,
-.navbar-block.contact:hover {
+.navbar-block.portfolio.is-active,
+.navbar-block.contact.is-active {
   background: #fa9581;
+}
+
+.navbar-block.portfolio p.is-active,
+.navbar-block.contact p.is-active {
+  color: #fff;
 }
 
 .navbar-block.portfolio p,

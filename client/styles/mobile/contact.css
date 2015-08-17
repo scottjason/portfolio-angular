@@ -5,47 +5,7 @@
     position: relative;
     margin: auto;
   }
-  .contact-name,
-  .contact-email {
-    width: 80%;
-    padding: 14px;
-    font-size: 14px;
-    color: #46A8E5;
-    outline: 0;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #efefef;
-    margin-bottom: 30px;
-  }
-  .contact-name:nth-child(1),
-  .contact-email:nth-child(1) {
-    margin-top: 10px !important;
-  }
-  .contact-message {
-    width: 83%;
-    color: white;
-    background-color: transparent;
-    height: 120px;
-    padding: 10px;
-    font-size: 14px;
-    margin-top: 25px;
-    border: 1px solid #efefef;
-    outline: 0;
-  }
-  .contact-form-btn {
-    width: 180px;
-    padding: 10px 0;
-    float: right;
-    margin-right: 6%;
-    margin-top: 9px;
-    border-radius: 35px;
-    border: 1px solid #46A8E5;
-    font-weight: 300;
-    font-size: 14px;
-    background-color: transparent;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
+  .contact-overlay {
+    height: 400px;
   }
 }
