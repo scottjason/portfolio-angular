@@ -4,10 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var expressState = require('express-state');
 
 var config = require('./config');
 
 var app = express();
+expressState.extend(app);
+
+app.set('state namespace', 'roomBaby');
+app.expose("roomBaby", 'foo');
+
 
 var server = require('http').Server(app);
 
@@ -55,7 +61,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 
 server.listen(app.get('port'), function() {

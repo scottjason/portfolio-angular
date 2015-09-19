@@ -2,8 +2,18 @@ var config = require('../config');
 var mailer = require('../utils/mailer');
 var transport = mailer.generateTransport();
 
-exports.render = function(req, res, next) {
-  res.render('index');
+
+exports.renderLanding = function(req, res, next) {
+  res.render('index', {pathName: null});
+};
+
+exports.renderPortfolio = function(req, res, next) {
+  res.render('index', {pathName: 'portfolio'});
+};
+
+
+exports.renderContact = function(req, res, next) {
+
 };
 
 exports.redirect = function(req, res, next) {

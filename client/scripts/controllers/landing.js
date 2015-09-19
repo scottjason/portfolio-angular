@@ -5,9 +5,12 @@ angular.module('Portfolio')
 
 function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService, RequestApi) {
 
+  console.log('### Landing Controller');
+
   var ctrl = this;
 
   $scope.user = {};
+
 
   var resetNavbar = function() {
     $scope.isPortfolio = false;
