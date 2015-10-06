@@ -38,6 +38,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     $scope.showPortfolio = false;
     $scope.showContact = false;
     $scope.showAbout = false;
+    $scope.showLoader = false;
+    $scope.showSent = false;
   }
 
   $rootScope.$on('dropdown:setFixed', function() {
@@ -96,6 +98,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.isValid = function(key) {
+    console.log(key);
     return StateService.data['ContactForm'][key].isValid;
   };
 
@@ -117,14 +120,15 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
         $scope.showLoader = true;
         RequestApi.sendMessage($scope.user).then(function(response) {
           $scope.showSent = true;
-
           $scope.showLoader = false;
-          console.log('response', response);
         }, function(err) {
           console.log(err);
         });
       } else {
-        console.log('render invalid input');
+        $scope.showBadInput = true;
+        $timeout(function() {
+          $scope.showBadInput = false;
+        }, 1500);
       }
     });
   };

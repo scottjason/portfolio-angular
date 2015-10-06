@@ -206,7 +206,7 @@ angular
   .module('Portfolio')
   .directive('ngValidate', ngValidate);
 
-function ngValidate($rootScope, StateService) {
+function ngValidate($rootScope, $timeout, StateService) {
   var directive = {
     link: link
   };
@@ -228,13 +228,14 @@ function ngValidate($rootScope, StateService) {
 
       var isValid = validateEmail(modelEmail);
 
-      StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
-      StateService.data['ContactForm'].email.isValid = isValid ? true : false;
-      StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+        StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
+        StateService.data['ContactForm'].email.isValid = isValid ? true : false;
+        StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+
 
       if (isSubmitBtn) {
-          console.log(scope);
-        
+        console.log(scope);
+
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
           $rootScope.$broadcast('contact:submitForm', true);
         } else {
@@ -243,7 +244,7 @@ function ngValidate($rootScope, StateService) {
       }
     });
   };
-  ngValidate.$inject = ['$rootScope', 'StateService'];
+  ngValidate.$inject = ['$rootScope', '$timeout', 'StateService'];
 }
 
 
@@ -343,6 +344,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     $scope.showPortfolio = false;
     $scope.showContact = false;
     $scope.showAbout = false;
+    $scope.showLoader = false;
+    $scope.showSent = false;
   }
 
   $rootScope.$on('dropdown:setFixed', function() {
@@ -401,6 +404,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.isValid = function(key) {
+    console.log(key);
     return StateService.data['ContactForm'][key].isValid;
   };
 
@@ -422,14 +426,15 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
         $scope.showLoader = true;
         RequestApi.sendMessage($scope.user).then(function(response) {
           $scope.showSent = true;
-
           $scope.showLoader = false;
-          console.log('response', response);
         }, function(err) {
           console.log(err);
         });
       } else {
-        console.log('render invalid input');
+        $scope.showBadInput = true;
+        $timeout(function() {
+          $scope.showBadInput = false;
+        }, 1500);
       }
     });
   };

@@ -38,6 +38,33 @@ ul {
   color: #46A8E5;
 }
 
+.err-message.name {
+  position: absolute;
+  font-size: 12px;
+  color: #fa9581;
+  left: 10px;
+  top: -8px;
+  left: 38px;
+}
+
+.err-message.email {
+  position: absolute;
+  font-size: 12px;
+  color: #fa9581;
+  left: 10px;
+  left: 38px;
+  top: 63px;
+}
+
+.err-message.message {
+  position: absolute;
+  font-size: 12px;
+  color: #fa9581;
+  left: 10px;
+  left: 30px;
+  top: 150px;
+}
+
 .err-message {
   position: absolute;
   font-size: 12px;

@@ -11,6 +11,10 @@ exports.renderPortfolio = function(req, res, next) {
   res.render('index', {pathName: 'portfolio'});
 };
 
+exports.renderAbout = function(req, res, next) {
+  res.render('index', {pathName: 'about'});
+};
+
 
 exports.renderContact = function(req, res, next) {
   res.render('index', {pathName: 'contact'});

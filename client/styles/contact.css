@@ -13,12 +13,13 @@
   right: 0;
   top: 130px;
   margin: auto;
-  height: 450px;
+  height: 410px;
   width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
   border-radius: 15px 15px 15px 15px;
   padding: 20px;
   border-bottom: 1px solid #efefef;
+  padding-bottom: 50px;
 }
 
 .about-overlay {
@@ -28,12 +29,13 @@
   right: 0;
   top: 130px;
   margin: auto;
-  height: 565px;
+  height: 100%;
   width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
   border-radius: 15px 15px 15px 15px;
   padding: 20px;
   border-bottom: 1px solid #efefef;
+  padding-bottom: 50px;
 }
 
 .contact-form-btn > p {
@@ -85,6 +87,10 @@
   text-align: center;
   position: relative;
   cursor: pointer;
+}
+
+.contact-form-btn.invalid {
+  border: 1px solid red;
 }
 
 .contact-form-btn.ok {

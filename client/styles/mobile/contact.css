@@ -5,12 +5,6 @@
     position: relative;
     margin: auto;
   }
-  .contact-overlay {
-    height: 400px;
-  }
-  .about-overlay {
-    height: 825px;
-  }
   .contact-form-btn {
     margin: auto;
     top: 20px;

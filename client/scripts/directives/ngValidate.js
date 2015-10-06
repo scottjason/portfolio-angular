@@ -2,7 +2,7 @@ angular
   .module('Portfolio')
   .directive('ngValidate', ngValidate);
 
-function ngValidate($rootScope, StateService) {
+function ngValidate($rootScope, $timeout, StateService) {
   var directive = {
     link: link
   };
@@ -24,13 +24,14 @@ function ngValidate($rootScope, StateService) {
 
       var isValid = validateEmail(modelEmail);
 
-      StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
-      StateService.data['ContactForm'].email.isValid = isValid ? true : false;
-      StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+        StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
+        StateService.data['ContactForm'].email.isValid = isValid ? true : false;
+        StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
+
 
       if (isSubmitBtn) {
-          console.log(scope);
-        
+        console.log(scope);
+
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
           $rootScope.$broadcast('contact:submitForm', true);
         } else {
@@ -39,5 +40,5 @@ function ngValidate($rootScope, StateService) {
       }
     });
   };
-  ngValidate.$inject = ['$rootScope', 'StateService'];
+  ngValidate.$inject = ['$rootScope', '$timeout', 'StateService'];
 }
