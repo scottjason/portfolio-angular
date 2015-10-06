@@ -71,3 +71,19 @@
   position: relative;
   cursor: pointer;
 }
+
+.contact-form-btn.ok {
+  float: none;
+  top: 185px;
+  margin: auto;
+}
+
+.sending-message {
+  position: relative;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  top: 150px;
+  font-size: 24px;
+  color: white;
+}

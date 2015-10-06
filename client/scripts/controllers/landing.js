@@ -105,15 +105,22 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   }
 
   ctrl.onSubmitContact = function(isValid) {
-    if (isValid) {
-      RequestApi.sendMessage($scope.user).then(function(response) {
-        console.log('response', response);
-      }, function(err) {
-        console.log(err);
-      });
-    } else {
-      console.log('render invalid input');
-    }
+    $timeout(function() {
+      if (isValid) {
+        $scope.showLoader = true;
+        RequestApi.sendMessage($scope.user).then(function(response) {
+          $scope.showSent = true;
+          
+        $scope.showLoader = false;
+          console.log('response', response);
+        }, function(err) {
+          console.log(err);
+        });
+      } else {
+        console.log('render invalid input');
+      }
+    });
+
   };
 
   LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService', 'RequestApi'];

@@ -241,7 +241,10 @@ function ngValidate($rootScope, StateService) {
       StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
 
       if (isSubmitBtn) {
+          console.log(scope);
+        
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
+          // $scope.showLoader = true;
           $rootScope.$broadcast('contact:submitForm', true);
         } else {
           $rootScope.$broadcast('contact:submitForm', false);
@@ -416,15 +419,22 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   }
 
   ctrl.onSubmitContact = function(isValid) {
-    if (isValid) {
-      RequestApi.sendMessage($scope.user).then(function(response) {
-        console.log('response', response);
-      }, function(err) {
-        console.log(err);
-      });
-    } else {
-      console.log('render invalid input');
-    }
+    $timeout(function() {
+      if (isValid) {
+        $scope.showLoader = true;
+        RequestApi.sendMessage($scope.user).then(function(response) {
+          $scope.showSent = true;
+          
+        $scope.showLoader = false;
+          console.log('response', response);
+        }, function(err) {
+          console.log(err);
+        });
+      } else {
+        console.log('render invalid input');
+      }
+    });
+
   };
 
   LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService', 'RequestApi'];
