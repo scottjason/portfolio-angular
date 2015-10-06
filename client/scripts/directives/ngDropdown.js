@@ -25,7 +25,23 @@ function ngDropdown() {
       'name': 'Contact'
     }];
 
-    $scope.placeholder = 'Portfolio';
+    $scope.getPlaceholder = function() {
+
+      var isPortfolio = ($state.current.name === 'landing.portfolio');
+      var isResume = ($state.current.name === 'landing.resume');
+      var isAbout = ($state.current.name === 'landing.about');
+      var isContact = ($state.current.name === 'landing.contact');
+
+      if (isPortfolio) {
+        return 'Portfolio';
+      } else if (isResume) {
+        return 'Resume';
+      } else if (isAbout) {
+        return 'About';
+      } else {
+        return 'Contact';
+      }
+    };
 
     $scope.reset = function(cb) {
       $scope.$parent.showPortfolio = false;
@@ -41,7 +57,6 @@ function ngDropdown() {
 
     $scope.landingCtrl.optSelected = function(optSelected) {
 
-      $scope.placeholder = optSelected;
       $window.scrollTo(0, 0);
 
       var mapOpt = {
@@ -50,18 +65,17 @@ function ngDropdown() {
       };
 
       $scope.reset(function() {
-    
 
-      var isPortfolio = (optSelected === 'Portfolio');
-      var isContact = (optSelected === 'Contact');
+        var isPortfolio = (optSelected === 'Portfolio');
+        var isContact = (optSelected === 'Contact');
 
-      if (isPortfolio) {
-        $scope.$parent[mapOpt[optSelected]] = true;
-        $state.go('landing.portfolio');
-      } else if (isContact) {
-        $scope.$parent[mapOpt[optSelected]] = true;
-        $state.go('landing.contact');
-      }
+        if (isPortfolio) {
+          $scope.$parent[mapOpt[optSelected]] = true;
+          $state.go('landing.portfolio');
+        } else if (isContact) {
+          $scope.$parent[mapOpt[optSelected]] = true;
+          $state.go('landing.contact');
+        }
         if (!$scope.$$phase) {
           $scope.$apply();
         }

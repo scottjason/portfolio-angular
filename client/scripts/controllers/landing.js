@@ -11,26 +11,39 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
   $scope.user = {};
 
-  function init() {
-    var redirectTo = $rootScope.redirectTo;
-    console.log('redirectTo', redirectTo);
+  $scope.init = function(redirectTo) {
+    var mapOpt = {
+      'portfolio': 'showPortfolio',
+      'contact': 'showContact'
+    };
+
+    if (redirectTo) {
+      $scope[mapOpt[redirectTo]] = true;
+      redirectTo = 'landing.' + redirectTo;
+      $timeout(function() {
+        $scope.fadeWelcome = true;
+        $timeout(function() {
+          $state.go(redirectTo);
+        }, 50);
+      });
+    }
+    $rootScope.redirectTo = null;
   }
 
-  init();
+  $scope.init($rootScope.redirectTo);
 
 
   var resetNavbar = function() {
-    $scope.isPortfolio = false;
-    $scope.isContact = false;
+    $scope.showPortfolio = false;
+    $scope.showContact = false;
   }
 
   var resetState = function() {
-    $scope.Portfolio = false;
-    $scope.Contact = false;
+    $scope.showPortfolio = false;
+    $scope.showContact = false;
   }
 
   $rootScope.$on('dropdown:setFixed', function() {
-    console.log('on setFixed')
     $scope.fixDropdown = true;
     if (!$scope.$$phase) {
       $scope.$apply();
@@ -48,14 +61,14 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     ctrl.onSubmitContact(isValid);
   });
 
-  $rootScope.$on('isPortfolio', function() {
+  $rootScope.$on('showPortfolio', function() {
     resetNavbar();
-    $scope.isPortfolio = true;
+    $scope.showPortfolio = true;
   });
 
-  $rootScope.$on('isContact', function() {
+  $rootScope.$on('showContact', function() {
     resetNavbar();
-    $scope.isContact = true;
+    $scope.showContact = true;
   });
 
   this.onWelcome = function() {
@@ -64,7 +77,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
       $timeout(function() {
         $scope.showPortfolio = true;
         $state.go('landing.portfolio');
-      }, 120);
+      }, 50);
     });
   };
 
@@ -81,9 +94,14 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.navigate = function(state, condition) {
+    var mapOpt = {
+      'Portfolio': 'showPortfolio',
+      'Contact': 'showContact'
+    };
     resetState();
     $state.go(state);
-    $scope[condition] = true;
+    console.log('condition', condition)
+    $scope[mapOpt[condition]] = true;
   }
 
   ctrl.onSubmitContact = function(isValid) {
