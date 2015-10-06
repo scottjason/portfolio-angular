@@ -12,17 +12,26 @@
     font-size: 22px;
   }
   .work-type:nth-child(1) {
-    padding-top: 0px !important;
+    padding-top: 0px;
   }
+  .about-interact-header,
   .company-name,
   .role-name,
   .interval-and-location,
-  .article-text {
+  .article-text,
+  .article-header,
+  .about-stanza-header,
+  .about-stanza-body,
+  .my-contributions,
+  .article-stack,
+  .article-tools,
+  .article-stack span,
+  .article-tools span {
     text-align: center;
   }
   .article-line {
     color: white;
-    width: 60%;
+    width: 175px;
     margin: auto;
     bottom: 10px;
   }
@@ -30,7 +39,32 @@
     font-size: 11px;
     white-space: nowrap;
   }
-  .article-header {
-    text-align: center;
+  .icon-globe.stanza {
+    left: 95px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.interact {
+    left: 100px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.you-are-here {
+    left: 123px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.scrape-rentals {
+    left: 131px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
 }

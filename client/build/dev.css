@@ -364,10 +364,10 @@ ul {
   left: 231px;
   color: #46A8E5;
   cursor: pointer;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: .3s;
+  transition: 0.3s;
 }
 
 .article-spacer {
@@ -394,6 +394,10 @@ ul {
   border-bottom: transparent;
   border-radius: 15px 15px 0 0;
   padding: 20px;
+}
+
+.portfolio-overlay.show-portfolio {
+  color: #46A8E5;
 }
 
 .about-stanza-header {
@@ -492,7 +496,7 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
 
 .work-type {
   color: #fa9581;
-  z-index: 45;
+  z-index: 0;
   padding-top: 45px;
   font-size: 21px;
 }
@@ -944,6 +948,7 @@ a.company-name:hover {
     margin: auto;
     top: 90px;
     right: 0;
+    z-index: 6;
     border-radius: 5px 5px 0 0;
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
@@ -1066,17 +1071,26 @@ a.company-name:hover {
     font-size: 22px;
   }
   .work-type:nth-child(1) {
-    padding-top: 0px !important;
+    padding-top: 0px;
   }
+  .about-interact-header,
   .company-name,
   .role-name,
   .interval-and-location,
-  .article-text {
+  .article-text,
+  .article-header,
+  .about-stanza-header,
+  .about-stanza-body,
+  .my-contributions,
+  .article-stack,
+  .article-tools,
+  .article-stack span,
+  .article-tools span {
     text-align: center;
   }
   .article-line {
     color: white;
-    width: 60%;
+    width: 175px;
     margin: auto;
     bottom: 10px;
   }
@@ -1084,8 +1098,33 @@ a.company-name:hover {
     font-size: 11px;
     white-space: nowrap;
   }
-  .article-header {
-    text-align: center;
+  .icon-globe.stanza {
+    left: 95px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.interact {
+    left: 100px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.you-are-here {
+    left: 123px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
+  }
+  .icon-globe.scrape-rentals {
+    left: 131px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
 }
 

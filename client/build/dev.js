@@ -70,6 +70,8 @@ function ngDropdown() {
   };
   return directive;
 
+
+
   function controller($scope, $window, $state) {
 
     $scope.dropdownOpts = [{
@@ -85,10 +87,10 @@ function ngDropdown() {
     $scope.placeholder = 'Portfolio';
 
     $scope.reset = function(cb) {
-      $scope.$parent.Portfolio = false;
-      $scope.$parent.Resume = false;
-      $scope.$parent.About = false;
-      $scope.$parent.Contact = false;
+      $scope.$parent.showPortfolio = false;
+      $scope.$parent.showResume = false;
+      $scope.$parent.showAbout = false;
+      $scope.$parent.showContact = false;
       cb();
     }
 
@@ -97,12 +99,28 @@ function ngDropdown() {
     };
 
     $scope.landingCtrl.optSelected = function(optSelected) {
-      if (optSelected === 'Contact') $state.go('landing.contact');
-      if (optSelected === 'Portfolio') $state.go('landing.portfolio');
-      $window.scrollTo(0, 0);
+
       $scope.placeholder = optSelected;
+      $window.scrollTo(0, 0);
+
+      var mapOpt = {
+        'Portfolio': 'showPortfolio',
+        'Contact': 'showContact'
+      };
+
       $scope.reset(function() {
-        $scope.$parent[optSelected] = true;
+    
+
+      var isPortfolio = (optSelected === 'Portfolio');
+      var isContact = (optSelected === 'Contact');
+
+      if (isPortfolio) {
+        $scope.$parent[mapOpt[optSelected]] = true;
+        $state.go('landing.portfolio');
+      } else if (isContact) {
+        $scope.$parent[mapOpt[optSelected]] = true;
+        $state.go('landing.contact');
+      }
         if (!$scope.$$phase) {
           $scope.$apply();
         }
@@ -131,38 +149,39 @@ angular.module('Portfolio')
           console.log('### ngPortfolio.js');
 
           $scope.onLogout = function() {
-              $rootScope.isLogout = true;
+            $rootScope.isLogout = true;
+            var isRequesting = $rootScope.isRequesting;
+            if (isRequesting) {
+              isReady();
+            } else {
+              onReady();
+            }
+
+            function isReady() {
               var isRequesting = $rootScope.isRequesting;
               if (isRequesting) {
-                isReady();
+                $timeout(isReady, 200);
               } else {
+                $rootScope.isLogout = null;
                 onReady();
               }
+            }
 
-              function isReady() {
-                var isRequesting = $rootScope.isRequesting;
-                if (isRequesting) {
-                  $timeout(isReady, 200);
-                } else {
-                  $rootScope.isLogout = null;
-                  onReady();
-                }
-              }
-
-              function onReady() {
-                localStorageService.clearAll();
-                isAuthorized = null;
-                localStorageService.set('isRedirect', true);
-                RequestApi.onLogout().then(function() {
-                  window.location.href = window.location.protocol + '//' + window.location.host;
-                })
-              }
+            function onReady() {
+              localStorageService.clearAll();
+              isAuthorized = null;
+              localStorageService.set('isRedirect', true);
+              RequestApi.onLogout().then(function() {
+                window.location.href = window.location.protocol + '//' + window.location.host;
+              })
+            }
           }
         }
       ],
     }
     return directive;
   });
+
 
 angular
   .module('Portfolio')
@@ -299,6 +318,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   var ctrl = this;
 
   $scope.user = {};
+
+  function init() {
+    var redirectTo = $rootScope.redirectTo;
+    console.log('redirectTo', redirectTo);
+  }
+
+  init();
 
 
   var resetNavbar = function() {

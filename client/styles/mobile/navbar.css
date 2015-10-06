@@ -39,6 +39,7 @@
     margin: auto;
     top: 90px;
     right: 0;
+    z-index: 6;
     border-radius: 5px 5px 0 0;
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;

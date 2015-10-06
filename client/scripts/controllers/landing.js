@@ -11,6 +11,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
   $scope.user = {};
 
+  function init() {
+    var redirectTo = $rootScope.redirectTo;
+    console.log('redirectTo', redirectTo);
+  }
+
+  init();
+
 
   var resetNavbar = function() {
     $scope.isPortfolio = false;

@@ -13,7 +13,7 @@ exports.renderPortfolio = function(req, res, next) {
 
 
 exports.renderContact = function(req, res, next) {
-
+  res.render('index', {pathName: 'contact'});
 };
 
 exports.redirect = function(req, res, next) {

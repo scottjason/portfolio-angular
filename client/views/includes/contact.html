@@ -1,4 +1,4 @@
-<div ng-validate ng-show='Contact' class='contact-overlay'>
+<div ng-validate class='contact-overlay'>
   <div class='contact-form'>
     <p ng-hide='landingCtrl.isValid("name") || !user.name || !user.name.length' class='err-message'>please enter a valid name</p>
     <input class='contact-name' type='text' placeholder='your name' ng-model='user.name'>

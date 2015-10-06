@@ -1,6 +1,6 @@
 <div ng-class="{ 'darken' : (isOpen) }"  class='landing-overlay'></div>
 
-<div ng-show='showPortfolio' class='navbar-container'>
+<div ng-show='showPortfolio || showContact' class='navbar-container'>
   <div class='navbar-container-inner'>
     <p class='navbar-copy title'>Scott Jason</p>
 
@@ -13,8 +13,8 @@
     <ng-dropdown></ng-dropdown>
 
     <div class='navbar-tab'>
-      <div ng-class="{ 'is-active' : (isPortfolio) }" ng-click='landingCtrl.navigate("landing.portfolio", "Portfolio")'  ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
-        <p ng-class="{ 'is-active' : (isPortfolio) }" class='navbar-copy work'>Portfolio</p>
+      <div ng-class="{ 'is-active' : (showPortfolio) }" ng-click='landingCtrl.navigate("landing.portfolio", "Portfolio")'  ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
+        <p ng-class="{ 'is-active' : (showPortfolio) }" class='navbar-copy work'>Portfolio</p>
       </div>
       <div ng-mouseover="onHoverResume = true" ng-mouseleave="onHoverResume = false" class='navbar-block resume'>
         <p  class='navbar-copy resume'>Resume</p>
@@ -22,8 +22,8 @@
       <div ng-mouseover="onHoverAbout = true" ng-mouseleave="onHoverAbout = false" class='navbar-block about'>
         <p class='navbar-copy about'>About</p>
       </div>
-      <div ng-class="{ 'is-active' : (isContact) }" ng-click='landingCtrl.navigate("landing.contact", "Contact")' ng-mouseover="onHoverContact = true" ng-mouseleave="onHoverContact = false" class='navbar-block contact'>
-        <p ng-class="{ 'is-active' : (isContact) }" class='navbar-copy contact'>Contact</p>
+      <div ng-class="{ 'is-active' : (showContact) }" ng-click='landingCtrl.navigate("landing.contact", "Contact")' ng-mouseover="onHoverContact = true" ng-mouseleave="onHoverContact = false" class='navbar-block contact'>
+        <p ng-class="{ 'is-active' : (showContact) }" class='navbar-copy contact'>Contact</p>
       </div>
     </div>
   </div>

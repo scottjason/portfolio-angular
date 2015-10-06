@@ -1,8 +1,8 @@
-<div ng-show='showPortfolio && !Contact' ng-class='{ "show-portfolio" : ( showPortfolio || Portfolio )}' class='portfolio-overlay'>
+<div ng-class='{ "show-portfolio" : ( showPortfolio )}' class='portfolio-overlay'>
   <div>
     <p class='work-type'>Professional Work</p>
     <div class='article-header'>
-      <a ng-click='landingCtrl.onCompanySelected("https://stanza.co/");' class='company-name' href="">Stanza<span class="icon-globe"></span></a>
+      <a ng-click='landingCtrl.onCompanySelected("https://stanza.co/");' class='company-name' href="">Stanza<span class="icon-globe stanza"></span></a>
     </div>
     <div class='article-line'></div>
     <p class='role-name'>Frontend Engineer</p>
@@ -34,7 +34,7 @@
     </div>
     <div class='work-spacer'></div>
     <div class='article-header'>
-      <a ng-click='landingCtrl.onCompanySelected("https://www.tryinteract.com/");' class='company-name' href="">Interact<span class="icon-globe"></span></a>
+      <a ng-click='landingCtrl.onCompanySelected("https://www.tryinteract.com/");' class='company-name' href="">Interact<span class="icon-globe interact"></span></a>
     </div>
     <div class='article-line'></div>
     <p class='role-name'>Software Engineer</p>
@@ -63,25 +63,24 @@
     </div>
     <p class='work-type projects'>Portfolio Projects</p>
     <div class='article-header'>
-      <a ng-click='landingCtrl.onCompanySelected("http://room-baby.com/");' class='company-name' href="">Room Baby<span class="icon-globe"></span></a>
+      <a ng-click='landingCtrl.onCompanySelected("https://you-are-here-app.herokuapp.com/");' class='company-name' href="">You Are Here<span class="icon-globe you-are-here"></span></a>
     </div>
     <div class='article-line'></div>
-    <p class='role-name'>Rooms, Broadcasts, File Sharing And More</p>
-    <p class="interval-and-location">August 2015 | San Francisco, Ca</p>
+    <p class='role-name'>Search Places, Get Reviews, Request Uber</p>
+    <p class="interval-and-location">September 2015 | San Francisco, Ca</p>
 
-      <p class='article-stack'><span>Stack: </span> Angular.js, Node.js, Express.js, MongoDB</p>
-      <p class='article-tools project'><span>Tools: </span> OpenTok WebRtc API, Grunt, AWS, Underscore, Async</p>
+      <p class='article-stack'><span>Stack: </span> Angular.js, Node.js, Express.js</p>
+      <p class='article-tools project'><span>Tools: </span> Uber API, Yelp API, Google Maps API, Gulp.js</p>
 
     <div class='article-text-container'>
      <p class='article-text'></p>
-      <p class='article-text'>Room Baby enables you to create rooms and broadcasts along with features like file-sharing and hi-def video recording.
-     A room is just like a video chat. You can see and hear them and they can see and hear you. Only these rooms come with a few extra features geared towards live-broadcasting, social-sharing, collaborating and archiving.</p>
+      <p class='article-text'>You Are Here integrates the Uber Api, Yelp Api and the Google Maps Api. It also implements oAuth 2.0 and deep-linking into Uber's native iOS app. Provides a search box to query for types of places in the area (bars, dinner, dentist, etc) and the search results render details about the places along with the yelp reviews and the uber ride-price and time-estimates. </p>
      <div class='article-spacer'></div>
-     <p class='article-text'>As far as Room Baby is concerned, a broadcast is a live audio/video stream of one person. Other people can view the broadcast, but they can't actually join the room as they would in a shared room, sorta like watching tv - only it's a live stream capable of being created by and shared with anyone.</p>
+     <p class='article-text'>When using iOS, there will also be a 'request uber' button next to each listing. You are here is mobile-first and fully responsive.</p>
     </div>
     <div class='work-spacer'></div>
     <div class='article-header'>
-      <a ng-click='landingCtrl.onCompanySelected("http://scrape-rentals.herokuapp.com/");' class='company-name' href="">Scrape Rentals<span class="icon-globe"></span></a>
+      <a ng-click='landingCtrl.onCompanySelected("http://scrape-rentals.herokuapp.com/");' class='company-name' href="">Scrape Rentals<span class="icon-globe scrape-rentals"></span></a>
     </div>
     <div class='article-line'></div>
     <p class='role-name'>A Responsive Web App that Scrapes Rental Listings in the US</p>

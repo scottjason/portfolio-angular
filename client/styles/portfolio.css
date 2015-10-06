@@ -17,10 +17,10 @@
   left: 231px;
   color: #46A8E5;
   cursor: pointer;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: .3s;
+  transition: 0.3s;
 }
 
 .article-spacer {
@@ -47,6 +47,10 @@
   border-bottom: transparent;
   border-radius: 15px 15px 0 0;
   padding: 20px;
+}
+
+.portfolio-overlay.show-portfolio {
+  color: #46A8E5;
 }
 
 .about-stanza-header {
@@ -145,7 +149,7 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
 
 .work-type {
   color: #fa9581;
-  z-index: 45;
+  z-index: 0;
   padding-top: 45px;
   font-size: 21px;
 }
