@@ -33,6 +33,11 @@ ul {
   height: 16px;
 }
 
+.add-blue {
+  cursor: pointer;
+  color: #46A8E5;
+}
+
 .err-message {
   position: absolute;
   font-size: 12px;
@@ -447,17 +452,28 @@ ul {
   color: #fff;
   font-size: 14px;
   padding-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
+
+.about-me,
 .about-me.first {
   position: relative;
   color: #fff;
   font-size: 14px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
+.about-me.main {
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.about-me {
+  padding-bottom: 0;
+}
 
 
 /* Article Container */
@@ -491,7 +507,7 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
 .article-text {
   color: #fff;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   width: 97%;
   line-height: 1.5;
 }
@@ -577,6 +593,10 @@ a.company-name:hover {
   margin: 0;
 }
 
+.role-name.orange {
+  color: #fa9581;
+}
+
 .interval-and-location {
   padding-top: 1px;
   font-size: 13px;
@@ -601,6 +621,21 @@ a.company-name:hover {
   top: 130px;
   margin: auto;
   height: 450px;
+  width: 80%;
+  border: 1px solid rgba(225, 225, 225, .6);
+  border-radius: 15px 15px 15px 15px;
+  padding: 20px;
+  border-bottom: 1px solid #efefef;
+}
+
+.about-overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  top: 130px;
+  margin: auto;
+  height: 565px;
   width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
   border-radius: 15px 15px 15px 15px;
@@ -1132,6 +1167,8 @@ a.company-name:hover {
   .work-type:nth-child(1) {
     padding-top: 0px;
   }
+  .about-me,
+  .about-me.first,
   .about-interact-header,
   .company-name,
   .role-name,
@@ -1146,6 +1183,9 @@ a.company-name:hover {
   .article-stack span,
   .article-tools span {
     text-align: center;
+  }
+  .about-me.first {
+    margin-bottom: -10px;
   }
   .article-line {
     color: white;
@@ -1197,6 +1237,9 @@ a.company-name:hover {
   }
   .contact-overlay {
     height: 400px;
+  }
+  .about-overlay {
+    height: 825px;
   }
   .contact-form-btn {
     margin: auto;

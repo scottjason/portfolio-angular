@@ -14,6 +14,8 @@
   .work-type:nth-child(1) {
     padding-top: 0px;
   }
+  .about-me,
+  .about-me.first,
   .about-interact-header,
   .company-name,
   .role-name,
@@ -28,6 +30,9 @@
   .article-stack span,
   .article-tools span {
     text-align: center;
+  }
+  .about-me.first {
+    margin-bottom: -10px;
   }
   .article-line {
     color: white;

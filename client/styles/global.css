@@ -33,6 +33,11 @@ ul {
   height: 16px;
 }
 
+.add-blue {
+  cursor: pointer;
+  color: #46A8E5;
+}
+
 .err-message {
   position: absolute;
   font-size: 12px;

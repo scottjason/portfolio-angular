@@ -103,7 +103,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     var mapOpt = {
       'Portfolio': 'showPortfolio',
       'Contact': 'showContact',
-      'About' : 'showAbout'
+      'About': 'showAbout'
     };
     resetState();
     $state.go(state);
@@ -132,6 +132,10 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   ctrl.downloadResume = function() {
     var url = 'https://dl.dropboxusercontent.com/u/7084808/Resume/Scott-Jason-Resume.pdf';
     window.open(url, '_blank');
+  };
+
+  ctrl.openLink = function(link) {
+    window.open(link, '_blank');
   };
 
 

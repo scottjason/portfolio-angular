@@ -72,17 +72,28 @@
   color: #fff;
   font-size: 14px;
   padding-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
+
+.about-me,
 .about-me.first {
   position: relative;
   color: #fff;
   font-size: 14px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
+.about-me.main {
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.about-me {
+  padding-bottom: 0;
+}
 
 
 /* Article Container */
@@ -116,7 +127,7 @@ div.ng-scope > div:nth-child(3) > div > div > div:nth-child(6) > p:nth-child(3) 
 .article-text {
   color: #fff;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   width: 97%;
   line-height: 1.5;
 }
@@ -200,6 +211,10 @@ a.company-name:hover {
   color: #46A8E5;
   padding-top: 15px;
   margin: 0;
+}
+
+.role-name.orange {
+  color: #fa9581;
 }
 
 .interval-and-location {
