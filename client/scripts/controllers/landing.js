@@ -72,6 +72,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   });
 
   this.onWelcome = function() {
+    resetState();
     $timeout(function() {
       $scope.fadeWelcome = true;
       $timeout(function() {
@@ -110,8 +111,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
         $scope.showLoader = true;
         RequestApi.sendMessage($scope.user).then(function(response) {
           $scope.showSent = true;
-          
-        $scope.showLoader = false;
+
+          $scope.showLoader = false;
           console.log('response', response);
         }, function(err) {
           console.log(err);
@@ -120,8 +121,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
         console.log('render invalid input');
       }
     });
-
   };
+
+  ctrl.downloadResume = function() {
+    var url = 'https://dl.dropboxusercontent.com/u/7084808/Resume/Scott-Jason-Resume.pdf';
+    window.open(url, '_blank');
+  };
+
 
   LandingCtrl.$inject['$scope', '$rootScope', '$state', '$timeout', '$window', 'StateService', 'RequestApi'];
 }

@@ -28,14 +28,11 @@ function ngDropdown() {
     $scope.getPlaceholder = function() {
 
       var isPortfolio = ($state.current.name === 'landing.portfolio');
-      var isResume = ($state.current.name === 'landing.resume');
       var isAbout = ($state.current.name === 'landing.about');
       var isContact = ($state.current.name === 'landing.contact');
 
       if (isPortfolio) {
         return 'Portfolio';
-      } else if (isResume) {
-        return 'Resume';
       } else if (isAbout) {
         return 'About';
       } else {
@@ -59,6 +56,14 @@ function ngDropdown() {
 
       $window.scrollTo(0, 0);
 
+      var isResume = (optSelected === 'Resume');
+      if (isResume) {
+        var url = 'https://dl.dropboxusercontent.com/u/7084808/Resume/Scott-Jason-Resume.pdf';
+        window.open(url, '_blank');
+        return;
+      }
+
+
       var mapOpt = {
         'Portfolio': 'showPortfolio',
         'Contact': 'showContact'
@@ -68,6 +73,8 @@ function ngDropdown() {
 
         var isPortfolio = (optSelected === 'Portfolio');
         var isContact = (optSelected === 'Contact');
+
+
 
         if (isPortfolio) {
           $scope.$parent[mapOpt[optSelected]] = true;

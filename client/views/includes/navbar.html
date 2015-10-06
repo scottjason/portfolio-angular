@@ -16,7 +16,7 @@
       <div ng-class="{ 'is-active' : (showPortfolio) }" ng-click='landingCtrl.navigate("landing.portfolio", "Portfolio")'  ng-mouseover="onHoverPortolfio = true" ng-mouseleave="onHoverPortolfio = false" class='navbar-block portfolio'>
         <p ng-class="{ 'is-active' : (showPortfolio) }" class='navbar-copy work'>Portfolio</p>
       </div>
-      <div ng-mouseover="onHoverResume = true" ng-mouseleave="onHoverResume = false" class='navbar-block resume'>
+      <div ng-click='landingCtrl.downloadResume();' ng-mouseover="onHoverResume = true" ng-mouseleave="onHoverResume = false" class='navbar-block resume'>
         <p  class='navbar-copy resume'>Resume</p>
       </div>
       <div ng-mouseover="onHoverAbout = true" ng-mouseleave="onHoverAbout = false" class='navbar-block about'>
