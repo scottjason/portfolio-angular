@@ -974,10 +974,12 @@ a.company-name:hover {
     margin: 0;
     opacity: 0;
     z-index: 0;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
   .dropdown-wrap {
     z-index: 0;
@@ -992,12 +994,16 @@ a.company-name:hover {
     right: 0;
     z-index: 6;
     border-radius: 5px 5px 0 0;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: .2s;
+    transition: 0.2s;
   }
   .dropdown-wrap.fix-dropdown {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: .2s;
+    transition: 0.2s;
     position: fixed;
     top: 0;
     border-radius: 0 0 0 0;
@@ -1009,10 +1015,10 @@ a.company-name:hover {
     height: 188px;
   }
   p.dropdown-opt {
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
     visibility: hidden;
   }
   p.dropdown-opt.on-open {
@@ -1034,10 +1040,10 @@ a.company-name:hover {
     top: 16px;
     font-size: 18px;
     cursor: pointer;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
   .icon-caret-down.hide {
     display: none;
@@ -1066,10 +1072,10 @@ a.company-name:hover {
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
   .placeholder:hover {
     color: #fa9581;
@@ -1084,10 +1090,10 @@ a.company-name:hover {
     top: 59px;
   }
   .social-container > i {
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
     padding-left: 7px;
     padding-right: 7px;
@@ -1180,5 +1186,10 @@ a.company-name:hover {
   }
   .contact-overlay {
     height: 400px;
+  }
+  .contact-form-btn {
+    margin: auto;
+    top: 20px;
+    float: none;
   }
 }

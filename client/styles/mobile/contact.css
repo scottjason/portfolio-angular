@@ -8,4 +8,9 @@
   .contact-overlay {
     height: 400px;
   }
+  .contact-form-btn {
+    margin: auto;
+    top: 20px;
+    float: none;
+  }
 }
