@@ -136,12 +136,14 @@ ul {
 }
 
 .navbar-block.portfolio.is-active,
-.navbar-block.contact.is-active {
+.navbar-block.contact.is-active,
+.navbar-block.about.is-active {
   background: #fa9581;
 }
 
 .navbar-block.portfolio p.is-active,
-.navbar-block.contact p.is-active {
+.navbar-block.contact p.is-active,
+.navbar-block.about p.is-active {
   color: #fff;
 }
 
@@ -447,6 +449,15 @@ ul {
   padding-bottom: 20px;
   font-weight: 300;
 }
+.about-me.first {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 300;
+}
+
 
 
 /* Article Container */

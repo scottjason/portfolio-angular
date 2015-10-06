@@ -14,7 +14,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   $scope.init = function(redirectTo) {
     var mapOpt = {
       'portfolio': 'showPortfolio',
-      'contact': 'showContact'
+      'contact': 'showContact',
+      'about': 'showAbout'
     };
 
     if (redirectTo) {
@@ -33,20 +34,19 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   $scope.init($rootScope.redirectTo);
 
 
-  var resetNavbar = function() {
-    $scope.showPortfolio = false;
-    $scope.showContact = false;
-  }
-
   var resetState = function() {
     $scope.showPortfolio = false;
     $scope.showContact = false;
+    $scope.showAbout = false;
   }
 
   $rootScope.$on('dropdown:setFixed', function() {
-    $scope.fixDropdown = true;
-    if (!$scope.$$phase) {
-      $scope.$apply();
+    if ($state.current.name !== 'landing.contact') {
+      console.log($state.current.name)
+      $scope.fixDropdown = true;
+      if (!$scope.$$phase) {
+        $scope.$apply();
+      }
     }
   });
 
@@ -62,13 +62,18 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   });
 
   $rootScope.$on('showPortfolio', function() {
-    resetNavbar();
+    resetState();
     $scope.showPortfolio = true;
   });
 
   $rootScope.$on('showContact', function() {
-    resetNavbar();
+    resetState();
     $scope.showContact = true;
+  });
+
+  $rootScope.$on('showAbout', function() {
+    resetState();
+    $scope.showAbout = true;
   });
 
   this.onWelcome = function() {
@@ -97,7 +102,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   this.navigate = function(state, condition) {
     var mapOpt = {
       'Portfolio': 'showPortfolio',
-      'Contact': 'showContact'
+      'Contact': 'showContact',
+      'About' : 'showAbout'
     };
     resetState();
     $state.go(state);

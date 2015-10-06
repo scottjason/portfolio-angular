@@ -13,7 +13,7 @@ function ngDropdown() {
 
 
 
-  function controller($scope, $window, $state) {
+  function controller($scope, $rootScope, $window, $state) {
 
     $scope.dropdownOpts = [{
       'name': 'Portfolio'
@@ -24,6 +24,10 @@ function ngDropdown() {
     }, {
       'name': 'Contact'
     }];
+
+    $rootScope.$on('dropdown:setFixed', function() {
+      $scope.isOpen = false;
+    });
 
     $scope.getPlaceholder = function() {
 
@@ -42,7 +46,6 @@ function ngDropdown() {
 
     $scope.reset = function(cb) {
       $scope.$parent.showPortfolio = false;
-      $scope.$parent.showResume = false;
       $scope.$parent.showAbout = false;
       $scope.$parent.showContact = false;
       cb();
@@ -63,23 +66,28 @@ function ngDropdown() {
         return;
       }
 
-
+      console.log(optSelected);
       var mapOpt = {
         'Portfolio': 'showPortfolio',
-        'Contact': 'showContact'
+        'Contact': 'showContact',
+        'About': 'showAbout'
       };
 
       $scope.reset(function() {
 
         var isPortfolio = (optSelected === 'Portfolio');
         var isContact = (optSelected === 'Contact');
+        var isAbout = (optSelected === 'About');
 
 
 
         if (isPortfolio) {
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.portfolio');
-        } else if (isContact) {
+        } else if (isAbout) {
+          $scope.$parent[mapOpt[optSelected]] = true;
+          $state.go('landing.about');
+        } else {
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.contact');
         }
@@ -89,5 +97,5 @@ function ngDropdown() {
       });
     };
   }
-  controller.$inject = ['$scope', '$window', '$state'];
+  controller.$inject = ['$scope', '$rootScope', '$window', '$state'];
 }

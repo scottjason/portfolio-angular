@@ -74,6 +74,15 @@
   padding-bottom: 20px;
   font-weight: 300;
 }
+.about-me.first {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 300;
+}
+
 
 
 /* Article Container */

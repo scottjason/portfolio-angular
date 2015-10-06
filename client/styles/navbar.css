@@ -66,12 +66,14 @@
 }
 
 .navbar-block.portfolio.is-active,
-.navbar-block.contact.is-active {
+.navbar-block.contact.is-active,
+.navbar-block.about.is-active {
   background: #fa9581;
 }
 
 .navbar-block.portfolio p.is-active,
-.navbar-block.contact p.is-active {
+.navbar-block.contact p.is-active,
+.navbar-block.about p.is-active {
   color: #fff;
 }
 

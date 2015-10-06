@@ -32,7 +32,6 @@ function ngValidate($rootScope, StateService) {
           console.log(scope);
         
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
-          // $scope.showLoader = true;
           $rootScope.$broadcast('contact:submitForm', true);
         } else {
           $rootScope.$broadcast('contact:submitForm', false);

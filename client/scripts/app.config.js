@@ -14,6 +14,11 @@ angular.module('Portfolio')
         templateUrl: 'views/includes/portfolio.html',
         controller: 'LandingCtrl as landingCtrl'
       })
+      .state('landing.about', {
+        url: 'about',
+        templateUrl: 'views/includes/about.html',
+        controller: 'LandingCtrl as landingCtrl'
+      })
       .state('landing.contact', {
         url: 'contact',
         templateUrl: 'views/includes/contact.html',
