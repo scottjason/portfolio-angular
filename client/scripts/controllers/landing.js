@@ -40,11 +40,10 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     $scope.showAbout = false;
     $scope.showLoader = false;
     $scope.showSent = false;
-  }
+  };
 
   $rootScope.$on('dropdown:setFixed', function() {
     if ($state.current.name !== 'landing.contact') {
-      console.log($state.current.name)
       $scope.fixDropdown = true;
       if (!$scope.$$phase) {
         $scope.$apply();
@@ -62,6 +61,13 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   $rootScope.$on('contact:submitForm', function(event, isValid) {
     ctrl.onSubmitContact(isValid);
   });
+
+  $rootScope.$on('showLanding', function(event) {
+    $scope.fadeWelcome = false;
+    resetState();
+    $scope.init();
+  });
+
 
   $rootScope.$on('showPortfolio', function() {
     resetState();

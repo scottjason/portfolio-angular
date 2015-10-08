@@ -9,6 +9,7 @@ angular.module('Portfolio')
     $rootScope.redirectTo = pathName;
 
     $rootScope.$on('$locationChangeSuccess', function() {
+      console.log('location change succeess', $location.path())
       $rootScope.currentLocation = $location.path();
     });
 
@@ -21,22 +22,16 @@ angular.module('Portfolio')
         var isAbout = (newLocation === '/about');
         var isContact = (newLocation === '/contact');
         if (isLanding) {
-        	$rootScope.redirectTo = 'landing';
+          $rootScope.$broadcast('showLanding');
         } else if (isPortfolio) {
-        	$rootScope.redirectTo = 'portfolio';
-
+          $rootScope.$broadcast('showPortfolio');
+        } else if (isAbout) {
+          $rootScope.$broadcast('showAbout');
+        } else if (isContact) {
+          $rootScope.$broadcast('showContact');
+        } else {
+          $rootScope.$broadcast('showLanding');
         }
       }
     });
-    // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-    //   var map = {
-    //     'landing': 'landing',
-    //     'landing.portfolio': 'portfolio',
-    //     'landing.about': 'about',
-    //     'landing.contact': 'contact'
-    //   };
-    //   console.log('toState', toState)
-    //     $rootScope.redirectTo = map[toState.name];
-    // });
-
   }]);
