@@ -356,12 +356,15 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   $scope.init($rootScope.redirectTo);
 
 
-  var resetState = function(isLanding) {
+  var resetState = function() {
     $scope.showPortfolio = false;
     $scope.showContact = false;
     $scope.showAbout = false;
     $scope.showLoader = false;
     $scope.showSent = false;
+    $timeout(function() {
+      $scope.user = {};
+    });
   };
 
   $rootScope.$on('dropdown:setFixed', function() {
