@@ -2,7 +2,7 @@
 
 <div ng-show='showPortfolio || showContact || showAbout' class='navbar-container'>
   <div class='navbar-container-inner'>
-    <p class='navbar-copy title'>Scott Jason</p>
+    <p ng-click='landingCtrl.navigate("landing", "Landing")' class='navbar-copy title'>Scott Jason</p>
 
     <div class='social-container'>
       <i ng-click='landingCtrl.onShareOpt("https://github.com/scottjason")'class="icon-social-github"></i>

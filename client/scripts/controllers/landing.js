@@ -109,6 +109,9 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.navigate = function(state, condition) {
+    if (state === 'landing') {
+      $scope.fadeWelcome = false;
+    }
     var mapOpt = {
       'Portfolio': 'showPortfolio',
       'Contact': 'showContact',
@@ -116,7 +119,9 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     };
     resetState();
     $state.go(state);
-    $scope[mapOpt[condition]] = true;
+    if (state !== 'landing') {
+      $scope[mapOpt[condition]] = true;
+    }
   }
 
   ctrl.onSubmitContact = function(isValid) {
