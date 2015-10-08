@@ -9,6 +9,15 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
   $scope.user = {};
 
+  ctrl.registerEvents = function() {
+    console.log('registerEvents')
+    angular.element(document).ready(function() {
+      $timeout(function() {
+        $scope.isLoaded = true;
+      })
+    });
+  };
+
   $scope.init = function(redirectTo) {
     var mapOpt = {
       'portfolio': 'showPortfolio',

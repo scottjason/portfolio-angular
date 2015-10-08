@@ -1,13 +1,14 @@
 body {
   margin: auto;
   overflow-x: hidden;
-  background: url(../assets/img/bg-image-2.jpg) no-repeat center center fixed;
+  background: url(https://s3-us-west-1.amazonaws.com/sj-portfolio/bg-image-med.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
+
 
 * {
   margin: 0;
