@@ -366,7 +366,7 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   $scope.init($rootScope.redirectTo);
 
 
-  var resetState = function() {
+  var resetState = function(isLanding) {
     $scope.showPortfolio = false;
     $scope.showContact = false;
     $scope.showAbout = false;
@@ -402,16 +402,19 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
 
 
   $rootScope.$on('showPortfolio', function() {
+    $scope.fadeWelcome = true;
     resetState();
     $scope.showPortfolio = true;
   });
 
   $rootScope.$on('showContact', function() {
+    $scope.fadeWelcome = true;
     resetState();
     $scope.showContact = true;
   });
 
   $rootScope.$on('showAbout', function() {
+    $scope.fadeWelcome = true;
     resetState();
     $scope.showAbout = true;
   });
@@ -443,6 +446,8 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   this.navigate = function(state, condition) {
     if (state === 'landing') {
       $scope.fadeWelcome = false;
+    } else {
+      $scope.fadeWelcome = true;
     }
     var mapOpt = {
       'Portfolio': 'showPortfolio',
