@@ -110,7 +110,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
     };
     resetState();
     $state.go(state);
-    console.log('condition', condition)
     $scope[mapOpt[condition]] = true;
   }
 
