@@ -1,10 +1,10 @@
 <div ng-validate class='contact-overlay'>
   <div ng-hide='showLoader || showSent' class='contact-form'>
-    <p ng-show='user.name.length === 1' class='err-message name'>please enter a valid name</p>
+    <!-- <p ng-show='user.name.length === 1' class='err-message name'>please enter a valid name</p> -->
     <input class='contact-name' type='text' placeholder='your name' ng-model='user.name'>
-    <p ng-hide='landingCtrl.isValid("email") || !user.email.length' class='err-message email'>please enter a valid email</p>
+    <!-- <p ng-hide='landingCtrl.isValid("email") || !user.email.length' class='err-message email'>please enter a valid email</p> -->
     <input class='contact-email' type='text' placeholder='your email' ng-model='user.email'>
-    <p ng-show='user.message.length === 1' class='err-message message'>please enter a valid message</p>
+    <!-- <p ng-show='user.message.length === 1' class='err-message message'>please enter a valid message</p> -->
     <textarea class='contact-message' placeholder='enter your message...' ng-model='user.message'></textarea>
     <div ng-hide='showLoader || showBadInput' id='submit-btn' ng-click='landingCtrl.submitContact();' class='contact-form-btn'>
       <p id='submit-btn-copy'>Submit</p>
