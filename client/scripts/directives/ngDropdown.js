@@ -85,6 +85,7 @@ function ngDropdown() {
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.about');
         } else {
+          $scope.$parent.user = {};
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.contact');
         }
