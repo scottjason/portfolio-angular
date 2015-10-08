@@ -36,4 +36,10 @@
     text-transform: capitalize;
     margin: auto;
   }
+  .landing-overlay.darken {
+    background: rgba(0, 0, 0, .4) !important;
+  }
+  .portfolio-overlay {
+    background: rgba(0, 0, 0, .7);
+  }
 }

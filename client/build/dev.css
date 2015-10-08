@@ -800,6 +800,12 @@ a.company-name:hover {
     text-transform: capitalize;
     margin: auto;
   }
+  .landing-overlay.darken {
+    background: rgba(0, 0, 0, .4) !important;
+  }
+  .portfolio-overlay {
+    background: rgba(0, 0, 0, .7);
+  }
 }
 
 
@@ -1001,6 +1007,9 @@ a.company-name:hover {
     .work-type:nth-child(1) {
       padding-top: 0px !important;
     }
+    .portfolio-overlay {
+      background: rgba(0, 0, 0, .7);
+    }
   }
 
 
@@ -1035,6 +1044,12 @@ a.company-name:hover {
   .welcome-btn > p {
     font-size: 14px;
     top: 5px;
+  }
+  .landing-overlay.darken {
+      background: rgba(0, 0, 0, .4) !important; 
+  }
+  .portfolio-overlay {
+    background: rgba(0, 0, 0, .7);
   }
 }
 
