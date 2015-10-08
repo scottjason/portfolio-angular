@@ -79,8 +79,6 @@ function ngDropdown() {
         var isContact = (optSelected === 'Contact');
         var isAbout = (optSelected === 'About');
 
-
-
         if (isPortfolio) {
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.portfolio');

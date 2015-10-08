@@ -49,7 +49,6 @@ angular.module('Portfolio')
     $rootScope.redirectTo = pathName;
 
     $rootScope.$on('$locationChangeSuccess', function() {
-      console.log('location change succeess', $location.path())
       $rootScope.currentLocation = $location.path();
     });
 
@@ -158,8 +157,6 @@ function ngDropdown() {
         var isContact = (optSelected === 'Contact');
         var isAbout = (optSelected === 'About');
 
-
-
         if (isPortfolio) {
           $scope.$parent[mapOpt[optSelected]] = true;
           $state.go('landing.portfolio');
@@ -254,13 +251,11 @@ function ngValidate($rootScope, $timeout, StateService) {
 
       var isValid = validateEmail(modelEmail);
 
-        StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
-        StateService.data['ContactForm'].email.isValid = isValid ? true : false;
-        StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
-
+      StateService.data['ContactForm'].name.isValid = (modelName && modelName.length) ? true : false;
+      StateService.data['ContactForm'].email.isValid = isValid ? true : false;
+      StateService.data['ContactForm'].message.isValid = (modelMessage && modelMessage.length) ? true : false;
 
       if (isSubmitBtn) {
-        console.log(scope);
 
         if (StateService.data['ContactForm'].name.isValid && StateService.data['ContactForm'].email.isValid && StateService.data['ContactForm'].message.isValid) {
           $rootScope.$broadcast('contact:submitForm', true);
@@ -439,7 +434,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.isValid = function(key) {
-    console.log(key);
     return StateService.data['ContactForm'][key].isValid;
   };
 

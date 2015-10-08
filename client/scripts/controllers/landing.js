@@ -107,7 +107,6 @@ function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService
   };
 
   this.isValid = function(key) {
-    console.log(key);
     return StateService.data['ContactForm'][key].isValid;
   };
 

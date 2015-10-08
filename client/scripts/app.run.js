@@ -9,7 +9,6 @@ angular.module('Portfolio')
     $rootScope.redirectTo = pathName;
 
     $rootScope.$on('$locationChangeSuccess', function() {
-      console.log('location change succeess', $location.path())
       $rootScope.currentLocation = $location.path();
     });
 
