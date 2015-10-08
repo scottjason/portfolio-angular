@@ -44,10 +44,10 @@
   height: 100%;
   width: 80%;
   border: 1px solid rgba(225, 225, 225, .6);
-  border-bottom: transparent;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 15px 15px;
   padding: 20px;
   padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .portfolio-overlay.show-portfolio {
@@ -221,6 +221,7 @@ a.company-name:hover {
 .role-name.orange.italic {
   font-style: italic;
 }
+
 .role-name.orange.italic > span {
   font-style: normal;
   font-size: 12px;
