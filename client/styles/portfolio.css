@@ -218,6 +218,14 @@ a.company-name:hover {
   color: #fa9581;
 }
 
+.role-name.orange.italic {
+  font-style: italic;
+}
+.role-name.orange.italic > span {
+  font-style: normal;
+  font-size: 12px;
+}
+
 .interval-and-location {
   padding-top: 1px;
   font-size: 13px;
