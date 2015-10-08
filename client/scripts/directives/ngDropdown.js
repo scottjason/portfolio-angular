@@ -66,7 +66,6 @@ function ngDropdown() {
         return;
       }
 
-      console.log(optSelected);
       var mapOpt = {
         'Portfolio': 'showPortfolio',
         'Contact': 'showContact',

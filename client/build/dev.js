@@ -43,8 +43,6 @@ angular.module('Portfolio')
 angular.module('Portfolio')
   .run(['$rootScope', '$window', '$state', '$location', function($rootScope, $window, $state, $location) {
 
-    console.log('### Run Block');
-
     var pathName = document.getElementById('pathName').innerHTML;
     $rootScope.redirectTo = pathName;
 
@@ -144,7 +142,6 @@ function ngDropdown() {
         return;
       }
 
-      console.log(optSelected);
       var mapOpt = {
         'Portfolio': 'showPortfolio',
         'Contact': 'showContact',
@@ -331,8 +328,6 @@ angular.module('Portfolio')
   .controller('LandingCtrl', LandingCtrl);
 
 function LandingCtrl($scope, $rootScope, $state, $timeout, $window, StateService, RequestApi) {
-
-  console.log('### Landing Controller');
 
   var ctrl = this;
 

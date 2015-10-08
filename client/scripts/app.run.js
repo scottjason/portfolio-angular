@@ -3,8 +3,6 @@
 angular.module('Portfolio')
   .run(['$rootScope', '$window', '$state', '$location', function($rootScope, $window, $state, $location) {
 
-    console.log('### Run Block');
-
     var pathName = document.getElementById('pathName').innerHTML;
     $rootScope.redirectTo = pathName;
 
