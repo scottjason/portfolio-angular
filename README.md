@@ -1,11 +1,19 @@
-##### Portfolio Site
+# Portfolio Site
 
-[View Site](http://www.scottleejason.com)
+[scottleejason.com](http://www.scottleejason.com)
 
-Stack: 
+## Installation
 
-- Angular.js
-- Node.js 
-- Express.js 
-- Grunt.js 
-- CSS3
+git clone git@github.com:scottjason/portfolio.git
+
+npm install -g grunt-cli
+npm install && bower install
+
+## Usage
+
+To develop: grunt server
+To build: grunt build
+
+## License
+
+MIT
