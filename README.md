@@ -5,8 +5,24 @@
 ## Installation
 
 ```
-git clone git@github.com:scottjason/portfolio.git
+git clone git@github.com:scottjason/portfolio.git && cd portfolio
 ```
+
+```
+touch env.json
+```
+
+
+In the env.json file, set the environmental variables for nodemailer (or remove nodemailer):
+
+```
+{
+  "NODE_MAILER_EMAIL": "node mailer email",
+  "NODE_MAILER_PASSWORD": "node mailer password"
+}
+```
+
+
 
 ```
 npm install -g grunt-cli
