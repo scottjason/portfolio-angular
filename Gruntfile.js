@@ -12,8 +12,8 @@ module.exports = function(grunt) {
   grunt.initConfig(configOpts);
 
   var serverTasks = taskConfig.get('server');
-  var deployTasks = taskConfig.get('deploy');
+  var buildTasks = taskConfig.get('build');
 
   grunt.registerTask('server', serverTasks);
-  grunt.registerTask('deploy', deployTasks);
+  grunt.registerTask('build', buildTasks);
 };
