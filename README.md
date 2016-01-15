@@ -23,7 +23,6 @@ In the env.json file, set the environmental variables for nodemailer (or remove 
 ```
 
 
-
 ```
 npm install -g grunt-cli
 ```
