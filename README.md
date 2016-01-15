@@ -12,7 +12,6 @@ git clone git@github.com:scottjason/portfolio.git && cd portfolio
 touch env.json
 ```
 
-
 In the env.json file, set the environmental variables for nodemailer (or remove nodemailer):
 
 ```
