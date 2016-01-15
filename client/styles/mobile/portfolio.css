@@ -50,6 +50,13 @@
     -moz-transition: 0.3s;
     -o-transition: .3s;
     transition: 0.3s;
+  }  
+  .icon-globe.oak {
+    left: 128px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: .3s;
+    transition: 0.3s;
   }
   .icon-globe.interact {
     left: 100px;
