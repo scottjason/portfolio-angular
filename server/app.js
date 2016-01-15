@@ -14,7 +14,6 @@ expressState.extend(app);
 app.set('state namespace', 'roomBaby');
 app.expose("roomBaby", 'foo');
 
-
 var server = require('http').Server(app);
 
 app.set('port', process.env.PORT || 3000);
@@ -62,7 +61,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(app.get('port'), function() {
+server.listen(app.get('port'), function() {
   console.log('Server listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode');
 });
 
